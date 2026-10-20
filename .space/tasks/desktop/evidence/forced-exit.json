@@ -1,0 +1,19 @@
+{
+  "signal": "SIGKILL",
+  "processesBefore": [
+    {
+      "pid": 5077,
+      "name": "/tmp/mvm-desktop-aws-ancm9y78/mvm"
+    },
+    {
+      "pid": 5238,
+      "name": "ssh"
+    },
+    {
+      "pid": 5239,
+      "name": "/private/tmp/mvm-desktop-aws-ancm9y78/mvm"
+    }
+  ],
+  "liveProcessesAfter": [],
+  "listenerClosed": true
+}

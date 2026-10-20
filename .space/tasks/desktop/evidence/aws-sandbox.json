@@ -1,0 +1,310 @@
+{
+  "observedAt": "2026-10-20T05:25:11.626957+00:00",
+  "microvmId": "microvm-33212608-88dd-31a1-af92-03a4057cfb3a",
+  "imageVersion": "5.0",
+  "method": "IAM-authenticated existing session SSH; node user; read-only /proc cmdline, status, uid_map",
+  "parserCorrection": "Chromium rewrites cmdline argv[0] with space-separated arguments; split on NUL or whitespace before selecting executable and role.",
+  "observerUid": 1000,
+  "processes": [
+    {
+      "pid": 1261,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=renderer",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 2,
+      "seccompFilters": 1,
+      "namespacePids": [
+        1261,
+        264,
+        1
+      ],
+      "uidMap": [
+        1000,
+        1000,
+        1
+      ]
+    },
+    {
+      "pid": 1270,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=renderer",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 2,
+      "seccompFilters": 1,
+      "namespacePids": [
+        1270,
+        273,
+        1
+      ],
+      "uidMap": [
+        1000,
+        1000,
+        1
+      ]
+    },
+    {
+      "pid": 1280,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=utility",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 2,
+      "seccompFilters": 1,
+      "namespacePids": [
+        1280
+      ],
+      "uidMap": [
+        0,
+        0,
+        4294967295
+      ]
+    },
+    {
+      "pid": 1281,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=broker",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 2,
+      "seccompFilters": 1,
+      "namespacePids": [
+        1281
+      ],
+      "uidMap": [
+        0,
+        0,
+        4294967295
+      ]
+    },
+    {
+      "pid": 724,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "main",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 0,
+      "seccompFilters": 0,
+      "namespacePids": [
+        724
+      ],
+      "uidMap": [
+        0,
+        0,
+        4294967295
+      ]
+    },
+    {
+      "pid": 746,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=zygote",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 0,
+      "seccompFilters": 0,
+      "namespacePids": [
+        746
+      ],
+      "uidMap": [
+        0,
+        0,
+        4294967295
+      ]
+    },
+    {
+      "pid": 747,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=zygote",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 0,
+      "seccompFilters": 0,
+      "namespacePids": [
+        747,
+        1
+      ],
+      "uidMap": [
+        1000,
+        1000,
+        1
+      ]
+    },
+    {
+      "pid": 754,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=zygote",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 0,
+      "seccompFilters": 0,
+      "namespacePids": [
+        754,
+        3
+      ],
+      "uidMap": [
+        1000,
+        1000,
+        1
+      ]
+    },
+    {
+      "pid": 782,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=gpu-process",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 0,
+      "seccompFilters": 0,
+      "namespacePids": [
+        782
+      ],
+      "uidMap": [
+        0,
+        0,
+        4294967295
+      ]
+    },
+    {
+      "pid": 783,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=utility",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 0,
+      "seccompFilters": 0,
+      "namespacePids": [
+        783
+      ],
+      "uidMap": [
+        0,
+        0,
+        4294967295
+      ]
+    },
+    {
+      "pid": 787,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=utility",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 2,
+      "seccompFilters": 1,
+      "namespacePids": [
+        787,
+        4,
+        1
+      ],
+      "uidMap": [
+        1000,
+        1000,
+        1
+      ]
+    },
+    {
+      "pid": 827,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=renderer",
+      "sandboxDisabled": false,
+      "uid": [
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "noNewPrivileges": 1,
+      "seccomp": 2,
+      "seccompFilters": 1,
+      "namespacePids": [
+        827,
+        12,
+        1
+      ],
+      "uidMap": [
+        1000,
+        1000,
+        1
+      ]
+    }
+  ],
+  "conclusion": {
+    "collectionIssue": "cmdline parsing, not EACCES: Chromium executable plus arguments occupied argv[0].",
+    "rootAccessUsed": false,
+    "rendererPids": [
+      1261,
+      1270,
+      827
+    ],
+    "allObservedRenderersHaveNoNewPrivileges": true,
+    "allObservedRenderersHaveSeccompFilterMode": true,
+    "allObservedRenderersHaveSingleUidNamespaceMap": true,
+    "noObservedChromiumProcessHasNoSandboxFlag": true,
+    "scope": "Observed renderer processes; browser and other process roles have role-specific sandbox policies."
+  }
+}

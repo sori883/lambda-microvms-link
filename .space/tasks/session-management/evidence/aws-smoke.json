@@ -1,0 +1,84 @@
+{
+  "stateDirectory": "/tmp/mvm-sess-_3rfamnx",
+  "binarySha256": "d6ec471dcd8ada4ad310744a7de9524ce3e0c5cc8b2b3c7d982feec723e3e751",
+  "checks": {
+    "initialSsh": {
+      "exitCode": 0,
+      "stdout": "session-ssh-ok\n/home/node\nnode\n"
+    },
+    "sshReconnect": {
+      "exitCode": 0,
+      "stdout": "durable-session\n"
+    },
+    "longCodePath": {
+      "outcome": "VS Code exited without opening a window; verbose output confirmed Unix socket path exceeds 103 bytes. Product guard being added."
+    },
+    "list": {
+      "exitCode": 0,
+      "stdout": "{\"sessions\":[{\"id\":\"b505ca44-c02f-4ac1-bada-10094d78fd83\",\"name\":\"session-smoke\",\"project\":\"/Users/const/sori883/lambda-microvms-link/work/ssh-demo-wtOwJT/project\",\"accountId\":\"242201303782\",\"region\":\"ap-northeast-1\",\"profile\":\"AdministratorAccess-242201303782\",\"microvmId\":\"microvm-14fa81e0-2618-3f3f-ade4-e432732d73e7\",\"state\":\"RUNNING\",\"pending\":null,\"desired\":\"running\",\"observedAt\":\"2026-10-20T03:29:48.902Z\",\"expiresAt\":\"2026-10-20T03:34:38.467Z\"}]}\n",
+      "stderr": ""
+    },
+    "reconnectAfterCode": {
+      "exitCode": 0,
+      "stdout": "durable-session\n",
+      "stderr": ""
+    },
+    "codeStatus": {
+      "exitCode": 0,
+      "lines": [
+        "OS Version:       Darwin arm64 25.5.0",
+        "    0\t56294995342\t 22800\twindow [1] (\u3088\u3046\u3053\u305d \u2014 workspace [SSH: mvm-b505ca44-c02f-4ac1-bada-10094d78fd83])",
+        "Remote:           SSH: mvm-b505ca44-c02f-4ac1-bada-10094d78fd83",
+        "OS Version:       Linux arm64 6.1.166-24.303.amzn2023.aarch64",
+        "Folder (workspace): 2 files"
+      ]
+    },
+    "userSettingsUnchanged": true,
+    "curlProbe": {
+      "installedOnOwnedVm": true,
+      "remoteDownloadSucceeded": true
+    },
+    "sshFilesRemoved": true
+  },
+  "create": {
+    "exitCode": 0,
+    "result": {
+      "id": "b505ca44-c02f-4ac1-bada-10094d78fd83",
+      "name": "session-smoke",
+      "project": "/Users/const/sori883/lambda-microvms-link/work/ssh-demo-wtOwJT/project",
+      "accountId": "242201303782",
+      "region": "ap-northeast-1",
+      "profile": "AdministratorAccess-242201303782",
+      "microvmId": "microvm-14fa81e0-2618-3f3f-ade4-e432732d73e7",
+      "state": "RUNNING",
+      "pending": null,
+      "desired": "running",
+      "observedAt": "2026-10-20T03:19:40.700Z",
+      "expiresAt": "2026-10-20T03:34:38.467Z"
+    },
+    "error": null
+  },
+  "userSettingsHashesBefore": {
+    "/Users/const/.ssh/config": null,
+    "/Users/const/Library/Application Support/Code/User/settings.json": "e96ba1984b4b6ce24a80b9f85d099bfab149f6963a5d9b3043595226a58dd592"
+  },
+  "previousStateDirectory": "/var/folders/9w/921pjkys39q28sk4xsc0hs000000gn/T/mvm-session-smoke-334go34m",
+  "stop": {
+    "exitCode": 0,
+    "result": {
+      "id": "b505ca44-c02f-4ac1-bada-10094d78fd83",
+      "name": "session-smoke",
+      "project": "/Users/const/sori883/lambda-microvms-link/work/ssh-demo-wtOwJT/project",
+      "accountId": "242201303782",
+      "region": "ap-northeast-1",
+      "profile": "AdministratorAccess-242201303782",
+      "microvmId": "microvm-14fa81e0-2618-3f3f-ade4-e432732d73e7",
+      "state": "TERMINATED",
+      "pending": null,
+      "desired": "terminated",
+      "observedAt": "2026-10-20T03:29:56.256Z",
+      "expiresAt": "2026-10-20T03:34:38.467Z"
+    },
+    "stderr": ""
+  }
+}

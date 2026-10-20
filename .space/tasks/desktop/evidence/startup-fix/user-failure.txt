@@ -1,0 +1,7 @@
+{"at":1792482318017,"generation":"6f4c5d3c-5306-48b3-a90c-b916443f14e4","error":"DesktopStartFailed:xvnc"}
+-r--r--r-- 1 node node   11 Oct 20 07:45 /tmp/.X1-lock
+drwxrwxrwt 2 node node 4096 Oct 20 07:45 /tmp/.X11-unix
+173.05 660.76
+               total        used        free      shared  buff/cache   available
+Mem:            8016         370        7596           3         256        7646
+Swap:              0           0           0

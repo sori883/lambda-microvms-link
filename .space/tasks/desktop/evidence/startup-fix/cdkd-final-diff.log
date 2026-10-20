@@ -1,0 +1,8 @@
+$ cdkd diff MicrovmFoundation "--fail-on=any-change"
+Calculating diff...
+Synthesizing CDK app...
+Found 1 stack(s) in assembly
+
+Calculating diff for stack: MicrovmFoundation
+
+✓ No changes detected for stack MicrovmFoundation

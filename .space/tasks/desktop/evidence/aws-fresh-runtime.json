@@ -1,0 +1,153 @@
+{
+  "processes": [
+    {
+      "pid": 120,
+      "executable": "/usr/bin/Xtigervnc",
+      "role": "main",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "0          0 4294967295"
+    },
+    {
+      "pid": 144,
+      "executable": "xfce4-session",
+      "role": "main",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "0          0 4294967295"
+    },
+    {
+      "pid": 145,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "main",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "0          0 4294967295"
+    },
+    {
+      "pid": 346,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=zygote",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "0          0 4294967295"
+    },
+    {
+      "pid": 354,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=zygote",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "1000       1000          1"
+    },
+    {
+      "pid": 376,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=zygote",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "1000       1000          1"
+    },
+    {
+      "pid": 490,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=gpu-process",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "0          0 4294967295"
+    },
+    {
+      "pid": 495,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=utility",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "0          0 4294967295"
+    },
+    {
+      "pid": 520,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=utility",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "2",
+      "uidMap": "1000       1000          1"
+    },
+    {
+      "pid": 539,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=renderer",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "2",
+      "uidMap": "1000       1000          1"
+    },
+    {
+      "pid": 545,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=renderer",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "2",
+      "uidMap": "1000       1000          1"
+    },
+    {
+      "pid": 546,
+      "executable": "/usr/lib/chromium/chromium",
+      "role": "--type=renderer",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "2",
+      "uidMap": "1000       1000          1"
+    }
+  ],
+  "paths": {
+    "/tmp/mvm-desktop-1000": {
+      "uid": 1000,
+      "mode": "700",
+      "socket": false
+    },
+    "/tmp/mvm-desktop-1000/vnc.sock": {
+      "uid": 1000,
+      "mode": "600",
+      "socket": true
+    },
+    "/tmp/mvm-desktop-1000/control.sock": {
+      "uid": 1000,
+      "mode": "600",
+      "socket": true
+    }
+  },
+  "tcpListenPorts": [
+    44341,
+    55514,
+    3000,
+    1144,
+    53,
+    53,
+    53,
+    8080,
+    8443,
+    53
+  ]
+}

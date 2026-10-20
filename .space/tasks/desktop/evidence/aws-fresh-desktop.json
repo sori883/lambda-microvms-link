@@ -1,0 +1,9 @@
+{
+  "session": "desktop-fresh",
+  "imageVersion": "6.0",
+  "ready": true,
+  "firstAttempt": true,
+  "secondsToReady": 37.824,
+  "secondsElapsed": 41.779,
+  "stderr": "Desktop connection is active. Press Ctrl+C to disconnect; the VM stays running.\n"
+}

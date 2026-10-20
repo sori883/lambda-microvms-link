@@ -1,0 +1,7 @@
+{
+  "image/desktop.mjs": "a0783c7b77f3242c7244ebbfd528230b589bb598d6bfa8f22665e7ce90568685",
+  "src/desktop.ts": "0e439bcfc6a5ae1527c68eb6794e3034138be15aab776bd4f7fe3bd98b2e1890",
+  "tests/desktop.test.ts": "257f2adf8a821f43215dfa8774060fd2d228d0e8382f58e0c440150bb6e453ca",
+  "tests/image-desktop.test.ts": "4156f7e23f6ba679d12f9d5973bf9f5182b2ef3e0896f3a91982bc604363af5f",
+  "dist/mvm": "e8aab82dba084a2095b1b4d87351c625db91a72940ee042699b0638cf3c2ca7b"
+}

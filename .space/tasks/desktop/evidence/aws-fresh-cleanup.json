@@ -1,0 +1,13 @@
+{
+  "vmTerminationVisible": "Disconnected. Reconnect while the CLI is running.",
+  "signal": "SIGINT",
+  "processesBefore": [
+    {
+      "pid": 8894,
+      "name": "/tmp/mvm-desktop-aws-ancm9y78/mvm"
+    }
+  ],
+  "liveProcessesAfter": [],
+  "listenerClosed": true,
+  "sessionKeyFilesRemaining": 0
+}

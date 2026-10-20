@@ -1,0 +1,1161 @@
+{
+  "schemaVersion": 1,
+  "plugin": "koto",
+  "product": "codex",
+  "version": "0.1.5",
+  "entries": [
+    {
+      "source": "space/babel/LICENSE",
+      "destination": ".space/babel/LICENSE",
+      "mode": "seed",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "space/babel/decisions/index.md",
+      "destination": ".space/babel/decisions/index.md",
+      "mode": "merge-index",
+      "hash": "189126899391b6402a811c005543cf9d4aab6f3cd0c9dcec8f478373d1b513d0",
+      "indexSource": "# decisions\n"
+    },
+    {
+      "source": "space/babel/index.md",
+      "destination": ".space/babel/index.md",
+      "mode": "merge-index",
+      "hash": "3efebaea2819f8a718a42bbf92dca3e6ac195fed9051319eebb7aa1e4e91d095",
+      "indexSource": "---\nokf_version: \"0.2\"\n---\n\n# Knowledge Base\n* [rules](rules/index.md)\n* [principles](principles/index.md)\n* [knowledge](knowledge/index.md)\n* [procedures](procedures/index.md)\n* [decisions](decisions/index.md)\n"
+    },
+    {
+      "source": "space/babel/knowledge/index.md",
+      "destination": ".space/babel/knowledge/index.md",
+      "mode": "merge-index",
+      "hash": "342ee009844e7ad2461a07e7e253a0c9f7d737cf01225e83257d775489b74b63",
+      "indexSource": "# knowledge\n"
+    },
+    {
+      "source": "space/babel/log.md",
+      "destination": ".space/babel/log.md",
+      "mode": "seed",
+      "hash": "69aef98562327c722427ff5d72bc733a1ce94280be7689a70272a0d7a9b41cb9"
+    },
+    {
+      "source": "space/babel/principles/attack-the-premise.md",
+      "destination": ".space/babel/principles/attack-the-premise.md",
+      "mode": "copy",
+      "hash": "119dff17c4274ae896dcd56707c1ac3837d4643d379a860c757dbb2744c2a458"
+    },
+    {
+      "source": "space/babel/principles/boundary-discipline.md",
+      "destination": ".space/babel/principles/boundary-discipline.md",
+      "mode": "copy",
+      "hash": "f1ad8b37b9a84b13ed0c50609dbca68cb7fd5b326af4b44ef1567b239026759e"
+    },
+    {
+      "source": "space/babel/principles/build-the-lever.md",
+      "destination": ".space/babel/principles/build-the-lever.md",
+      "mode": "copy",
+      "hash": "dd7d459e790527c010be1d58afb517ab5a08ccd071984ebd9ee2ffca40beb3f3"
+    },
+    {
+      "source": "space/babel/principles/encode-lessons-in-structure.md",
+      "destination": ".space/babel/principles/encode-lessons-in-structure.md",
+      "mode": "copy",
+      "hash": "08676bc5d82ce5d9d2d634c236beed887c87f272b87a458122c6dab7fd9ee595"
+    },
+    {
+      "source": "space/babel/principles/exhaust-the-design-space.md",
+      "destination": ".space/babel/principles/exhaust-the-design-space.md",
+      "mode": "copy",
+      "hash": "a8d33a1fae35932a5484b468f85ae89707d4462869762be5d7c8fef490fe63db"
+    },
+    {
+      "source": "space/babel/principles/experience-first.md",
+      "destination": ".space/babel/principles/experience-first.md",
+      "mode": "copy",
+      "hash": "12b1acd182fe0063ef4333c786b3d13ae830fe614877ca394c245bbfd9c220e7"
+    },
+    {
+      "source": "space/babel/principles/fix-root-causes.md",
+      "destination": ".space/babel/principles/fix-root-causes.md",
+      "mode": "copy",
+      "hash": "873ebab0cfeff7f7862335d3b8e8f92d2320e7588ccd752ead4e27c658d74446"
+    },
+    {
+      "source": "space/babel/principles/foundational-thinking.md",
+      "destination": ".space/babel/principles/foundational-thinking.md",
+      "mode": "copy",
+      "hash": "74218a4ab5fcb6559f6983088471d0e0659cd0549439ddc86af03386b4c3c086"
+    },
+    {
+      "source": "space/babel/principles/guard-the-context-window.md",
+      "destination": ".space/babel/principles/guard-the-context-window.md",
+      "mode": "copy",
+      "hash": "9495c9fe2ae0f00a0d6efbf13dec8aa761eee8a66779499f881b43c632acd8c7"
+    },
+    {
+      "source": "space/babel/principles/index.md",
+      "destination": ".space/babel/principles/index.md",
+      "mode": "merge-index",
+      "hash": "107ae80a2ebeb30ccdf5235d22be235876a8042fcd997cdfa3508fd37dcbf82b",
+      "indexSource": "# principles\n* [最小の変更と複雑さで解決する](laziness-protocol.md) - リファクタリングや変更量を評価し、抽象化・層・引数の受け渡しを追加するとき、削除と単純化を優先して問題を解決する最小の変更を選ぶ。\n* [ロジックより先にデータと基盤を整える](foundational-thinking.md) - 中心となる型・データ構造・共有状態や基盤と機能の順序を決めるとき、ロジックの前にデータとアクセス方法を整える。\n* [新しい要件を前提に設計し直す](redesign-from-first-principles.md) - 既存設計へ新しい要件を組み込むとき、その要件が最初から存在した場合の構造を考えて段階的に反映する。\n* [修正が繰り返し失敗したら前提を疑う](attack-the-premise.md) - 同じ前提を共有する修正が同じ検証で2回以上失敗したら、前提と偏りの所在を調べてから次の修正へ進む。\n* [追加する前に不要なものを取り除く](subtract-before-you-add.md) - 機能追加・リファクタリング・書き換えの順序を決めるとき、不要なコードや指示を先に除き、観測された用途に必要な構造を作る。\n* [読み手が追う層と覚える状態を減らす](minimize-reader-load.md) - 追いにくいコードをレビューしたり、層・ラッパー・可変状態を追加したりするとき、読み手がたどる層と覚える状態を減らして値の出所を追いやすくする。\n* [検証できる最終状態へ向けて移行する](outcome-oriented-execution.md) - 段階と検証の区切りを明示した書き換え・移行を行うとき、目標の構造へ収束させ、一時的な不整合を作業単位の終わりで解消する。\n* [実装の都合より利用者の体験を優先する](experience-first.md) - 製品・UX・機能範囲を判断するとき、利用者と保守担当者の体験を優先し、機能数より中心的な体験の完成度を高める。\n* [有力な設計案を具体化して比較する](exhaust-the-design-space.md) - 前例のないUI、複数の有力な構造、操作感が重要な判断で設計が明らかでないとき、異なる2〜3案を試作または具体化して比較する。\n* [作業や検証を再実行できる道具を作る](build-the-lever.md) - 自明な少数の編集を超える編集・移行・分析・検証を行うとき、同じ作業や確認を再実行できる最小の道具を作る。\n* [ドメインの規則をデータ構造に表す](model-the-domain.md) - 状態を持つ処理、分岐が多い処理、同じデータの前提が複数箇所へ広がる処理を書くとき、規則を型・状態機械・表などに集約する。\n* [検証を境界へ集めて内部の責務を分ける](boundary-discipline.md) - 入力検証・エラー処理・CLIや通信の接続部分を設計するとき、検証と型への変換をシステム境界に集約し、内部の業務ロジックを純粋な処理に保つ。\n* [型で不正な状態と扱い漏れを防ぐ](type-system-discipline.md) - 型・関数の引数と戻り値・状態の表現を設計またはレビューするとき、不正な組み合わせを型で防ぎ、境界での解析と網羅的な分岐で実行時の失敗を減らす。\n* [再実行で同じ最終状態へ収束させる](make-operations-idempotent.md) - 停止・再起動・再試行が起こり得るコマンド、起動終了処理、ループを設計するとき、重複実行や途中失敗からも同じ最終状態へ収束させる。\n* [呼び出し元を移行して旧APIを取り除く](migrate-callers-then-delete-legacy-apis.md) - 外部への互換性が不要で呼び出し元をまとめて移行できる内部APIの刷新では、同じ改修で呼び出し元を移行し、旧APIと不要な互換層を削除する。\n* [共有状態を分離してから排他制御を考える](separate-before-serializing-shared-state.md) - 複数の処理主体が同じファイル・ブランチ・キー・状態を書き換える可能性があるとき、共有の除去を先に検討し、必要な共有だけを構造的に直列化する。\n* [成果物の実際の動作を確かめる](prove-it-works.md) - 作業の完了を報告するときや他の担当者の成果を受け入れるとき、実際の成果物・値・動作を確認し、間接的な指標や自己申告だけを成功の根拠にしない。\n* [不具合を再現して根本原因を直す](fix-root-causes.md) - 不具合や異常な挙動を調査・修正するとき、先に再現し、観測した証拠から原因を追って症状だけを隠す修正を避ける。\n* [検証できる小さな単位で作業を進める](sequence-verifiable-units.md) - 複数箇所の修正・移行・反復する編集やコミット・PRの順序を組み立てるとき、作業を確認可能な小さな単位へ分け、各単位の検証後に次へ進む。\n* [内部実装より観測できる振る舞いをテストする](test-behavior-not-implementation.md) - テストを追加・変更するときや既存テストを残すか判断するとき、利用者と同じ入口から処理を動かし、独立した期待値と観測できる結果を比較する。\n* [必要な情報に絞ってコンテキストを保つ](guard-the-context-window.md) - 大量の出力・長い文書・反復した読み込み・並行作業で情報が増えるとき、必要な情報に絞り、主担当には根拠へ戻れる要点を集める。\n* [許可された可逆的な作業を確認待ちで止めない](never-block-on-the-human.md) - 既に依頼され権限が明らかな可逆的作業について改めて実行許可を尋ねようとするとき、自律的に進め、判断が不可欠な曖昧さや未承認の操作だけを確認する。\n* [繰り返す教訓を仕組みとして定着させる](encode-lessons-in-structure.md) - 同じ指示や修正、テスト失敗が繰り返されるとき、型・lint・共通処理・実行時検証などの仕組みで再発を防ぐ。\n"
+    },
+    {
+      "source": "space/babel/principles/laziness-protocol.md",
+      "destination": ".space/babel/principles/laziness-protocol.md",
+      "mode": "copy",
+      "hash": "de71b5a33ec94572cb1e79daf09eb60a647cb3c175742bcc951114264892acd7"
+    },
+    {
+      "source": "space/babel/principles/make-operations-idempotent.md",
+      "destination": ".space/babel/principles/make-operations-idempotent.md",
+      "mode": "copy",
+      "hash": "6b7b20fabac336364b669634877459fd3fd8e374d074ece3c2f73aea1a3d7da5"
+    },
+    {
+      "source": "space/babel/principles/migrate-callers-then-delete-legacy-apis.md",
+      "destination": ".space/babel/principles/migrate-callers-then-delete-legacy-apis.md",
+      "mode": "copy",
+      "hash": "161520805d765334f596f85f5fbffdab168b890917cc213b5236ba8fe8a4a501"
+    },
+    {
+      "source": "space/babel/principles/minimize-reader-load.md",
+      "destination": ".space/babel/principles/minimize-reader-load.md",
+      "mode": "copy",
+      "hash": "b16c67af5aaf60f8fba8aed38bf683e1e72bb578efed8032d0a5d5554de03caa"
+    },
+    {
+      "source": "space/babel/principles/model-the-domain.md",
+      "destination": ".space/babel/principles/model-the-domain.md",
+      "mode": "copy",
+      "hash": "622dad6f285f938cd5e3bb9bd5577040940cde35267771edf3d759ca55ea2f4c"
+    },
+    {
+      "source": "space/babel/principles/never-block-on-the-human.md",
+      "destination": ".space/babel/principles/never-block-on-the-human.md",
+      "mode": "copy",
+      "hash": "ffa0e150f4caf767ee1ffa3f403e79665349738304536a43fd000a024281abc7"
+    },
+    {
+      "source": "space/babel/principles/outcome-oriented-execution.md",
+      "destination": ".space/babel/principles/outcome-oriented-execution.md",
+      "mode": "copy",
+      "hash": "8d0c6830370f9bcb6b50ec7d1f785e5f7cd7167a6c3c44f0a458843b20587983"
+    },
+    {
+      "source": "space/babel/principles/prove-it-works.md",
+      "destination": ".space/babel/principles/prove-it-works.md",
+      "mode": "copy",
+      "hash": "5ace5a8192279f1e92bbf18a98948c7d95da9df1cbf43f7fd7c5bfccc5d7c14b"
+    },
+    {
+      "source": "space/babel/principles/redesign-from-first-principles.md",
+      "destination": ".space/babel/principles/redesign-from-first-principles.md",
+      "mode": "copy",
+      "hash": "97bd355db09a4cd5e046f36d91722b28b0acd69d0947bc97fa860887c50e07f5"
+    },
+    {
+      "source": "space/babel/principles/separate-before-serializing-shared-state.md",
+      "destination": ".space/babel/principles/separate-before-serializing-shared-state.md",
+      "mode": "copy",
+      "hash": "7cf5113549ef8075ddf4e8bfa92cd46c60652b46ca2770bb7c3f50f5cc93f1eb"
+    },
+    {
+      "source": "space/babel/principles/sequence-verifiable-units.md",
+      "destination": ".space/babel/principles/sequence-verifiable-units.md",
+      "mode": "copy",
+      "hash": "82ab9f7c979de12ea93cce33f61e90aba6b845158f5b22e67818475f89c31528"
+    },
+    {
+      "source": "space/babel/principles/subtract-before-you-add.md",
+      "destination": ".space/babel/principles/subtract-before-you-add.md",
+      "mode": "copy",
+      "hash": "ee45e31ed4926195605d927b92b5b4d88b8c7e74afe83097b0bd9a9f16cac85a"
+    },
+    {
+      "source": "space/babel/principles/test-behavior-not-implementation.md",
+      "destination": ".space/babel/principles/test-behavior-not-implementation.md",
+      "mode": "copy",
+      "hash": "92c915137a67d607a2e9e7bbfee43c40a689819a34e78e4e46c5b3d8df0abd9d"
+    },
+    {
+      "source": "space/babel/principles/type-system-discipline.md",
+      "destination": ".space/babel/principles/type-system-discipline.md",
+      "mode": "copy",
+      "hash": "427d5f6d7479eca7200f5cea8dc7f3af671010b0947c257e72bd6d52253f6f9d"
+    },
+    {
+      "source": "space/babel/procedures/index.md",
+      "destination": ".space/babel/procedures/index.md",
+      "mode": "merge-index",
+      "hash": "a4cfb78192f61d26dffad896651fedc60927600f5ba7388f2c8f69fae680e53b",
+      "indexSource": "# procedures\n"
+    },
+    {
+      "source": "space/babel/rules/index.md",
+      "destination": ".space/babel/rules/index.md",
+      "mode": "merge-index",
+      "hash": "b063d404f1417cfe60efad23a84eb7a9539b123ebc87f401aa0b7c3b86067df1",
+      "indexSource": "# rules\n"
+    },
+    {
+      "source": "templates/agents/comment-curator.toml",
+      "destination": ".codex/agents/comment-curator.toml",
+      "mode": "copy",
+      "hash": "55fd9709f114fab173c39bd0ade996886fe07a441a2250f90065c08b33922671"
+    },
+    {
+      "source": "templates/agents/devlow-worker.toml",
+      "destination": ".codex/agents/devlow-worker.toml",
+      "mode": "copy",
+      "hash": "b503fe64c43c86f316fea5e7ea0661a095a37fb27df85d6937081d48bcb8219e"
+    },
+    {
+      "source": "templates/AGENTS.md",
+      "destination": "AGENTS.md",
+      "mode": "managed-block",
+      "hash": "f4f0dda77e05627273db740fa88892c691b2ac5ee3ce8837549e878e9f383120"
+    },
+    {
+      "source": "skills/automate-me/LICENSE",
+      "destination": ".agents/skills/automate-me/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/automate-me/SKILL.md",
+      "destination": ".agents/skills/automate-me/SKILL.md",
+      "mode": "copy",
+      "hash": "6a9d8a0ccdf68d03b41e1cb17156171e038f9b54d6e1d89c099f5d9519b3bdc3"
+    },
+    {
+      "source": "skills/blast-radius/LICENSE",
+      "destination": ".agents/skills/blast-radius/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/blast-radius/SKILL.md",
+      "destination": ".agents/skills/blast-radius/SKILL.md",
+      "mode": "copy",
+      "hash": "64d067a8a0809d86e31e8fe621f5636cee4c225336ac30a8422887a34d67d522"
+    },
+    {
+      "source": "skills/bro/LICENSE",
+      "destination": ".agents/skills/bro/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/bro/SKILL.md",
+      "destination": ".agents/skills/bro/SKILL.md",
+      "mode": "copy",
+      "hash": "540e44b5a8ca2a361e07fa97bfd106a471f96b58db8ae5f92b6a792b1e5308a2"
+    },
+    {
+      "source": "skills/checkpoint-safely/LICENSE",
+      "destination": ".agents/skills/checkpoint-safely/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/checkpoint-safely/SKILL.md",
+      "destination": ".agents/skills/checkpoint-safely/SKILL.md",
+      "mode": "copy",
+      "hash": "8fb040a7d4453bed1fde5bea29db40630125aef2368f9312ea015f6ecdb1ac93"
+    },
+    {
+      "source": "skills/create-verification-skill/LICENSE",
+      "destination": ".agents/skills/create-verification-skill/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/create-verification-skill/SKILL.md",
+      "destination": ".agents/skills/create-verification-skill/SKILL.md",
+      "mode": "copy",
+      "hash": "10a17ae244dd8cbab0afa65223489aafba7f304510d5de479ed8edc632b4cc62"
+    },
+    {
+      "source": "skills/create-verification-skill/assets/feature-template.md",
+      "destination": ".agents/skills/create-verification-skill/assets/feature-template.md",
+      "mode": "copy",
+      "hash": "7630f96b4db337096169d21ecf031e8db6f37dc671a0aa7c92be46779837a9ea"
+    },
+    {
+      "source": "skills/devlow/LICENSE",
+      "destination": ".agents/skills/devlow/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/devlow/SKILL.md",
+      "destination": ".agents/skills/devlow/SKILL.md",
+      "mode": "copy",
+      "hash": "f791f4d316e7d387b28427e85a8d0f877b91bff63a2f15959b30ec6bcf2e459d"
+    },
+    {
+      "source": "skills/devlow/assets/design-template.md",
+      "destination": ".agents/skills/devlow/assets/design-template.md",
+      "mode": "copy",
+      "hash": "68cc25115c0c584cc8fa2644e024bd9c54eb767507057ecc1a037c65402f35b4"
+    },
+    {
+      "source": "skills/devlow/assets/plan-template.md",
+      "destination": ".agents/skills/devlow/assets/plan-template.md",
+      "mode": "copy",
+      "hash": "ace6f18da5fece63353b2befc2ac676dec0abf6430e04f63b396500096a60f00"
+    },
+    {
+      "source": "skills/devlow/assets/task-template.md",
+      "destination": ".agents/skills/devlow/assets/task-template.md",
+      "mode": "copy",
+      "hash": "fb4809e5402f016dc125c4a9bde93ab41976e55394475cb6044a06046605c1a0"
+    },
+    {
+      "source": "skills/devlow/assets/verification-template.md",
+      "destination": ".agents/skills/devlow/assets/verification-template.md",
+      "mode": "copy",
+      "hash": "027eb7d25c097b61cf9ebfe5988001b1f25104461045e48b1d438f870ffbbf0f"
+    },
+    {
+      "source": "skills/devlow/references/delegation.md",
+      "destination": ".agents/skills/devlow/references/delegation.md",
+      "mode": "copy",
+      "hash": "7cdaad9c579f1841ddb32c1b87af92fd078cd5719921f7712e245c4e776f0adc"
+    },
+    {
+      "source": "skills/devlow/references/deliver.md",
+      "destination": ".agents/skills/devlow/references/deliver.md",
+      "mode": "copy",
+      "hash": "86f59cea8b0901e1490840b30a6e1e0df23848dff337401e39160416a4c94b42"
+    },
+    {
+      "source": "skills/devlow/references/design.md",
+      "destination": ".agents/skills/devlow/references/design.md",
+      "mode": "copy",
+      "hash": "f46b1946e09e1233bc9756c13793f2e1c812dfbd901d345b64b4235c4763f505"
+    },
+    {
+      "source": "skills/devlow/references/implement.md",
+      "destination": ".agents/skills/devlow/references/implement.md",
+      "mode": "copy",
+      "hash": "7169664bcd107a6f2e93a6463950605cea4064310a58c09fc96d8fd5c3720af1"
+    },
+    {
+      "source": "skills/devlow/references/intake.md",
+      "destination": ".agents/skills/devlow/references/intake.md",
+      "mode": "copy",
+      "hash": "f805c3848d7d4c49a86c9f6654ae99312f1284ce23a38e4907a2555856e86b0e"
+    },
+    {
+      "source": "skills/devlow/references/investigate.md",
+      "destination": ".agents/skills/devlow/references/investigate.md",
+      "mode": "copy",
+      "hash": "13ae2bc4afa7a1b416363f06b81c741f9506128ad9a2b0658ce05af69fbe32a6"
+    },
+    {
+      "source": "skills/devlow/references/orchestrate.md",
+      "destination": ".agents/skills/devlow/references/orchestrate.md",
+      "mode": "copy",
+      "hash": "3f79aca44e01491eb574180d2f139fc0e70d3a0b192007ac84ed217ed85af588"
+    },
+    {
+      "source": "skills/devlow/references/plan.md",
+      "destination": ".agents/skills/devlow/references/plan.md",
+      "mode": "copy",
+      "hash": "cc4584b07606a9c7f1f0114da96ffd8c7187754af1b2aa4919110f3668e4d492"
+    },
+    {
+      "source": "skills/devlow/references/review.md",
+      "destination": ".agents/skills/devlow/references/review.md",
+      "mode": "copy",
+      "hash": "a3732602665bc631e81365b63e7a50e5b09f62cb48e0eaf12f56ce75ae7bf289"
+    },
+    {
+      "source": "skills/devlow/references/verify.md",
+      "destination": ".agents/skills/devlow/references/verify.md",
+      "mode": "copy",
+      "hash": "d30d8b77953c132509c90d2e3e7b3ef53fd94d20007bb29b763ee1036670582a"
+    },
+    {
+      "source": "skills/devlow/references/workflow.md",
+      "destination": ".agents/skills/devlow/references/workflow.md",
+      "mode": "copy",
+      "hash": "521504957fd2ebaed37bb87445542071f62fd1130b4a57d7cf85f0ad54584cdb"
+    },
+    {
+      "source": "skills/how/LICENSE",
+      "destination": ".agents/skills/how/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/how/SKILL.md",
+      "destination": ".agents/skills/how/SKILL.md",
+      "mode": "copy",
+      "hash": "ac0004c6cc65cc35ff3e4c6b7a0de951b24e7800e80cba1e34d1f03cffbd40ef"
+    },
+    {
+      "source": "skills/how/references/explainer-prompt.md",
+      "destination": ".agents/skills/how/references/explainer-prompt.md",
+      "mode": "copy",
+      "hash": "1f05df2c6bba3d40f7428c36322c8e10d56d9f5408fa0d537b06ccee3b36f79a"
+    },
+    {
+      "source": "skills/how/references/explorer-prompt.md",
+      "destination": ".agents/skills/how/references/explorer-prompt.md",
+      "mode": "copy",
+      "hash": "6041f3da3c1b9387550bf24caa9e4635a5c93366dce9cd8445b360392cd1b3b8"
+    },
+    {
+      "source": "skills/interrogate/LICENSE",
+      "destination": ".agents/skills/interrogate/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/interrogate/SKILL.md",
+      "destination": ".agents/skills/interrogate/SKILL.md",
+      "mode": "copy",
+      "hash": "5cfb2f489cf198ac18cd2d7744c8ac8e888115ba67555d6eec00fa12f2b45334"
+    },
+    {
+      "source": "skills/interrogate/references/reviewer-prompt.md",
+      "destination": ".agents/skills/interrogate/references/reviewer-prompt.md",
+      "mode": "copy",
+      "hash": "e66f152b63c3be31d11d6aba30a0400fa6bd79cb51ea6e62d09da1559efc4cf0"
+    },
+    {
+      "source": "skills/maintain-verification-skill/LICENSE",
+      "destination": ".agents/skills/maintain-verification-skill/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/maintain-verification-skill/SKILL.md",
+      "destination": ".agents/skills/maintain-verification-skill/SKILL.md",
+      "mode": "copy",
+      "hash": "659a13e401f9bcb5ad7667f650c4f4ac528d504e9378b5b352192b12c2da207f"
+    },
+    {
+      "source": "skills/natural-japanese/LICENSE",
+      "destination": ".agents/skills/natural-japanese/LICENSE",
+      "mode": "copy",
+      "hash": "fb3dd814f7b2807de2a812446c61643cf235e731bbf8cf908c0a5962d8917121"
+    },
+    {
+      "source": "skills/natural-japanese/SKILL.md",
+      "destination": ".agents/skills/natural-japanese/SKILL.md",
+      "mode": "copy",
+      "hash": "0f662a6ab4955b9146a138a38b73a619b27fa1448ef71e27fcc57f67d3ad0267"
+    },
+    {
+      "source": "skills/natural-japanese/assets/style-profile-template.md",
+      "destination": ".agents/skills/natural-japanese/assets/style-profile-template.md",
+      "mode": "copy",
+      "hash": "d43a199e1399c73a41f332c45c5cf2321457fd49391b0a5bec23e52ef6fb5541"
+    },
+    {
+      "source": "skills/natural-japanese/references/diagnose.md",
+      "destination": ".agents/skills/natural-japanese/references/diagnose.md",
+      "mode": "copy",
+      "hash": "e3c80cdeada823d34d003f83df1e9cbc0e07fbdf109b5c8f7a796a889a00d5a4"
+    },
+    {
+      "source": "skills/natural-japanese/references/doctypes/guide.md",
+      "destination": ".agents/skills/natural-japanese/references/doctypes/guide.md",
+      "mode": "copy",
+      "hash": "4b9db16365ea305c71eb9a59faedfc73620fd93d09721dc29292951994ba239d"
+    },
+    {
+      "source": "skills/natural-japanese/references/doctypes/memo.md",
+      "destination": ".agents/skills/natural-japanese/references/doctypes/memo.md",
+      "mode": "copy",
+      "hash": "d74be03c71e992f4c070fe42249e1cfc6faa87efc7438c6f5aa2659d831e17f5"
+    },
+    {
+      "source": "skills/natural-japanese/references/doctypes/minutes.md",
+      "destination": ".agents/skills/natural-japanese/references/doctypes/minutes.md",
+      "mode": "copy",
+      "hash": "de38887be3def7cd35e1b1ffbdf10c21a9c4601fb528f3022f14512df3bc8129"
+    },
+    {
+      "source": "skills/natural-japanese/references/doctypes/report.md",
+      "destination": ".agents/skills/natural-japanese/references/doctypes/report.md",
+      "mode": "copy",
+      "hash": "28f0cd6cef86fda5cb0bc236b9d1bb1d3d09892aacf5f813bec4f7c4cd84ea8f"
+    },
+    {
+      "source": "skills/natural-japanese/references/doctypes/slide.md",
+      "destination": ".agents/skills/natural-japanese/references/doctypes/slide.md",
+      "mode": "copy",
+      "hash": "1ca8db97566ad053cdb0115a72e12099f94648c5ba3a3d0bd6d33bf91c7f59d8"
+    },
+    {
+      "source": "skills/natural-japanese/references/eval-rubric.md",
+      "destination": ".agents/skills/natural-japanese/references/eval-rubric.md",
+      "mode": "copy",
+      "hash": "77a49a4d0f70a51d4e595dec3ab236543b404edab5c6ccafb57c3f1f68d4ae65"
+    },
+    {
+      "source": "skills/natural-japanese/references/examples.md",
+      "destination": ".agents/skills/natural-japanese/references/examples.md",
+      "mode": "copy",
+      "hash": "bc37c36ebda975351e2949f05990b7202737a3f5b1f95f53584158e9a6d1e99d"
+    },
+    {
+      "source": "skills/natural-japanese/references/forbidden-patterns.md",
+      "destination": ".agents/skills/natural-japanese/references/forbidden-patterns.md",
+      "mode": "copy",
+      "hash": "0cce2ad7f053611a8c983ebf86f55631e019bbf752cc815c04077b229a557b1f"
+    },
+    {
+      "source": "skills/natural-japanese/references/genre-notes.md",
+      "destination": ".agents/skills/natural-japanese/references/genre-notes.md",
+      "mode": "copy",
+      "hash": "d5b2f7ecda12649efc26ef4a716fe6b2d4c03568b674dc5a06842f90cf6e8a6f"
+    },
+    {
+      "source": "skills/natural-japanese/references/manual-checklist.md",
+      "destination": ".agents/skills/natural-japanese/references/manual-checklist.md",
+      "mode": "copy",
+      "hash": "19eda8c3098e941c593bb3d4018b9b1f284f3c184db140c799623a07e91c487c"
+    },
+    {
+      "source": "skills/natural-japanese/references/readability-antipatterns.md",
+      "destination": ".agents/skills/natural-japanese/references/readability-antipatterns.md",
+      "mode": "copy",
+      "hash": "10418600db75d12da4ba7ca6d76cc9d0bc60e305ae4e75fa90f28c2aa76317b0"
+    },
+    {
+      "source": "skills/natural-japanese/references/readability-principles.md",
+      "destination": ".agents/skills/natural-japanese/references/readability-principles.md",
+      "mode": "copy",
+      "hash": "6a495446fe6828968371d24a1b628d28a37842ae0fd0e4f11162b57a7f9c4d70"
+    },
+    {
+      "source": "skills/natural-japanese/references/revision-guide.md",
+      "destination": ".agents/skills/natural-japanese/references/revision-guide.md",
+      "mode": "copy",
+      "hash": "27641d1a2aa5b41821d3da186ddf4139dc091c5dd8fb20544d814675b863433a"
+    },
+    {
+      "source": "skills/natural-japanese/references/translationese.md",
+      "destination": ".agents/skills/natural-japanese/references/translationese.md",
+      "mode": "copy",
+      "hash": "09b3da1ebf4c663be9cb0bf9ed5bade476ba10804509e6ca6dc22dc15129f827"
+    },
+    {
+      "source": "skills/natural-japanese/references/writing-constitution.md",
+      "destination": ".agents/skills/natural-japanese/references/writing-constitution.md",
+      "mode": "copy",
+      "hash": "457b83afa64fa0da95a9daa25a8140e203fc4a3e87b2ff2c2839e0c8aad7ffdb"
+    },
+    {
+      "source": "skills/natural-japanese/scripts/calibrate.py",
+      "destination": ".agents/skills/natural-japanese/scripts/calibrate.py",
+      "mode": "copy",
+      "hash": "7409007f511524fafe7eaf026f8d693a0829d0bc0845b9e35092ea61deb411d8"
+    },
+    {
+      "source": "skills/natural-japanese/scripts/fixtures/ai-smelly.md",
+      "destination": ".agents/skills/natural-japanese/scripts/fixtures/ai-smelly.md",
+      "mode": "copy",
+      "hash": "c84979246c11005139ba35afe4e6c5f0a716cf2f8d7e9ac647efffe1b1c5c558"
+    },
+    {
+      "source": "skills/natural-japanese/scripts/fixtures/natural.md",
+      "destination": ".agents/skills/natural-japanese/scripts/fixtures/natural.md",
+      "mode": "copy",
+      "hash": "218c4e52cf0e231ba8c9192fc8f23b49de40d0b3463419a6697dea787862572e"
+    },
+    {
+      "source": "skills/natural-japanese/scripts/lint.py",
+      "destination": ".agents/skills/natural-japanese/scripts/lint.py",
+      "mode": "copy",
+      "hash": "576fb564126b6a81feadc88969a0ec8fb8fc7a755899e5b90fe91981e644881a"
+    },
+    {
+      "source": "skills/natural-japanese/scripts/outline.py",
+      "destination": ".agents/skills/natural-japanese/scripts/outline.py",
+      "mode": "copy",
+      "hash": "9b0478364f76c6aeed2befc8f4ee1aa4aa1ec6789eca45fb7b9958ccaed7ca80"
+    },
+    {
+      "source": "skills/natural-japanese/scripts/semantic.py",
+      "destination": ".agents/skills/natural-japanese/scripts/semantic.py",
+      "mode": "copy",
+      "hash": "c14909618677ee66c6f67a0cc81bc9ced9951f2ffd9727182e5e0de6b2d1d667"
+    },
+    {
+      "source": "skills/natural-japanese/scripts/terms.py",
+      "destination": ".agents/skills/natural-japanese/scripts/terms.py",
+      "mode": "copy",
+      "hash": "304acb82d8d8cb8a2f45b5efc1110f407e2316d23c13bfc8734670fc1ac81e19"
+    },
+    {
+      "source": "skills/natural-japanese/scripts/textcore.py",
+      "destination": ".agents/skills/natural-japanese/scripts/textcore.py",
+      "mode": "copy",
+      "hash": "ea363ed8611256afb07b0ce83b478c2d559a910d00bfa152d9244f60025da1f2"
+    },
+    {
+      "source": "skills/no-comments/LICENSE",
+      "destination": ".agents/skills/no-comments/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/no-comments/SKILL.md",
+      "destination": ".agents/skills/no-comments/SKILL.md",
+      "mode": "copy",
+      "hash": "ad3c32e4be5fae5bded9e791efda679fe6a57d80dc128eb2af35b0a17510a480"
+    },
+    {
+      "source": "skills/okf-agent-memory/LICENSE",
+      "destination": ".agents/skills/okf-agent-memory/LICENSE",
+      "mode": "copy",
+      "hash": "8de41d98bcdfca0d6a0399820f4d79e0738ff53a5fb04d605d1ecad7871cbafb"
+    },
+    {
+      "source": "skills/okf-agent-memory/SKILL.md",
+      "destination": ".agents/skills/okf-agent-memory/SKILL.md",
+      "mode": "copy",
+      "hash": "eccd695b0d98e1fe384ce0ba71cd6d5ef778a9388177b312af64e539819db89e"
+    },
+    {
+      "source": "skills/okf-agent-memory/references/cli.md",
+      "destination": ".agents/skills/okf-agent-memory/references/cli.md",
+      "mode": "copy",
+      "hash": "c54e6c10fbabcf490e235ab4c575e57a7889e83b027c87538f39c496db304913"
+    },
+    {
+      "source": "skills/okf-agent-memory/references/discovery.md",
+      "destination": ".agents/skills/okf-agent-memory/references/discovery.md",
+      "mode": "copy",
+      "hash": "383b23eb634d8cedbed7ed3bdbe5a4723a8913ae183bd0b7ff139780e02f5b36"
+    },
+    {
+      "source": "skills/okf-agent-memory/references/examples.md",
+      "destination": ".agents/skills/okf-agent-memory/references/examples.md",
+      "mode": "copy",
+      "hash": "27947d5e027f33f6033590bc1082756d88dff2840e86ee18fe5f2debfda252cd"
+    },
+    {
+      "source": "skills/okf-agent-memory/references/frontmatter.md",
+      "destination": ".agents/skills/okf-agent-memory/references/frontmatter.md",
+      "mode": "copy",
+      "hash": "a1f157a820741a77193416daffbe779127e1ec263df242edf3e42e2050b0513d"
+    },
+    {
+      "source": "skills/okf-agent-memory/references/relationships.md",
+      "destination": ".agents/skills/okf-agent-memory/references/relationships.md",
+      "mode": "copy",
+      "hash": "ab031ddfb537cdd1d47fce44b5e88a04044e6ef71cd65ba89ed4775114df0653"
+    },
+    {
+      "source": "skills/okf-agent-memory/references/remember.md",
+      "destination": ".agents/skills/okf-agent-memory/references/remember.md",
+      "mode": "copy",
+      "hash": "57f319d77a283c78cda894f43d996ed61ae2ae0b192bb15da94a68204ff0862f"
+    },
+    {
+      "source": "skills/okf-agent-memory/references/update.md",
+      "destination": ".agents/skills/okf-agent-memory/references/update.md",
+      "mode": "copy",
+      "hash": "bfa6c1d4758853f6ad615b1b6af7dce632382d63d15ecf5a64f0ac7ae6f911a4"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/bootstrap.ts",
+      "destination": ".agents/skills/okf-agent-memory/scripts/bootstrap.ts",
+      "mode": "copy",
+      "hash": "43058ad8ac88d5ef6e5f5c7e39e2893d837c9f82802024b8a06922dd37c6e984"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/bun.lock",
+      "destination": ".agents/skills/okf-agent-memory/scripts/bun.lock",
+      "mode": "copy",
+      "hash": "a6d5fbe78698395ae285a23fe8eaf150562c87fc520a31ff403bd8dc125092fb"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/lib/bundle.ts",
+      "destination": ".agents/skills/okf-agent-memory/scripts/lib/bundle.ts",
+      "mode": "copy",
+      "hash": "e50971454c35dfd1bde6bfe09b03eb00b36cdb87ec1a7462a5b88788804a4fd4"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/lib/cli.ts",
+      "destination": ".agents/skills/okf-agent-memory/scripts/lib/cli.ts",
+      "mode": "copy",
+      "hash": "f0366331b4bed246d3f407702fdc1ae0487afce5e84383d0dee3c44128601652"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/lib/document.ts",
+      "destination": ".agents/skills/okf-agent-memory/scripts/lib/document.ts",
+      "mode": "copy",
+      "hash": "e1f488d1a0e9ed08f39156f673b83a38ffc7ee72cbe64783f9226709bec66edf"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/lib/files.ts",
+      "destination": ".agents/skills/okf-agent-memory/scripts/lib/files.ts",
+      "mode": "copy",
+      "hash": "9177362ab872827bdf723e9e2883e2a8c4c09dc912c7b836fcc1a8bc1d5df542"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/lib/search.ts",
+      "destination": ".agents/skills/okf-agent-memory/scripts/lib/search.ts",
+      "mode": "copy",
+      "hash": "f5a6e32f3c0b2cb339d8c989caaea2c2f5002beaca856e8e6be8e3a54703f9b0"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/lib/validate.ts",
+      "destination": ".agents/skills/okf-agent-memory/scripts/lib/validate.ts",
+      "mode": "copy",
+      "hash": "a0dab52b026d73ce2ea58b5089c4133d926c3e5ecc4fe677f0daff425ece2d28"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/okf.ts",
+      "destination": ".agents/skills/okf-agent-memory/scripts/okf.ts",
+      "mode": "copy",
+      "hash": "e402ad805723ea0365af3903c58eeca3be50eb27a3984cc49728a37d95d59f4d"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/package.json",
+      "destination": ".agents/skills/okf-agent-memory/scripts/package.json",
+      "mode": "copy",
+      "hash": "6d1459ee7923a0908ff443258ac279e74cfce2ffff8db1402c268c7e9cdc10e5"
+    },
+    {
+      "source": "skills/okf-agent-memory/scripts/run.ts",
+      "destination": ".agents/skills/okf-agent-memory/scripts/run.ts",
+      "mode": "copy",
+      "hash": "46d7d6497e7844a39fb86f8941d249ebc18ea0879295c78a419c9e36040b14af"
+    },
+    {
+      "source": "skills/orch/SKILL.md",
+      "destination": ".agents/skills/orch/SKILL.md",
+      "mode": "copy",
+      "hash": "1b8670b566f9bfb81abb8ba41063eff33890cddea7933291d6317549e3aeee1e"
+    },
+    {
+      "source": "skills/orch/references/cli.md",
+      "destination": ".agents/skills/orch/references/cli.md",
+      "mode": "copy",
+      "hash": "7f77a3a5e679c3e2b0d2f7eda6a762d2e2b4a45d7b049be91efddbadfab5d5d0"
+    },
+    {
+      "source": "skills/orch/references/orchestration.md",
+      "destination": ".agents/skills/orch/references/orchestration.md",
+      "mode": "copy",
+      "hash": "fa07939a60c069bc2f359fcfa393810d421dd4edfd1d31fe191b837a20b11b50"
+    },
+    {
+      "source": "skills/orch/scripts/bootstrap.ts",
+      "destination": ".agents/skills/orch/scripts/bootstrap.ts",
+      "mode": "copy",
+      "hash": "f54d9c575fe6be8164b6ecf7324ca50d77d5126e7484f8476c355c1be6d9f5be"
+    },
+    {
+      "source": "skills/orch/scripts/lib/cli.ts",
+      "destination": ".agents/skills/orch/scripts/lib/cli.ts",
+      "mode": "copy",
+      "hash": "90349539c84e13fa0167f86c23f30e598cbf2c77136c65cf67ab20fcca9fbb83"
+    },
+    {
+      "source": "skills/orch/scripts/lib/engine.ts",
+      "destination": ".agents/skills/orch/scripts/lib/engine.ts",
+      "mode": "copy",
+      "hash": "be018a56b7c1bab1e207fc9f294c1ba553c3269e69907ce5fad275dd83210e89"
+    },
+    {
+      "source": "skills/orch/scripts/lib/model.ts",
+      "destination": ".agents/skills/orch/scripts/lib/model.ts",
+      "mode": "copy",
+      "hash": "573dfae5d5a533a27ba7c3cb1228e67a4c2f97fce643a47df0339c94e201331f"
+    },
+    {
+      "source": "skills/orch/scripts/lib/policy.ts",
+      "destination": ".agents/skills/orch/scripts/lib/policy.ts",
+      "mode": "copy",
+      "hash": "6eb9ea2cdf59accee5edee325e383e3ccae1d6ae31ca8cfd70a3fb293f6b6cd7"
+    },
+    {
+      "source": "skills/orch/scripts/lib/queries.ts",
+      "destination": ".agents/skills/orch/scripts/lib/queries.ts",
+      "mode": "copy",
+      "hash": "428693c24c6e66c26a860b6a715e9a21c015b75e0f4bee4f8c01d70b096e8df8"
+    },
+    {
+      "source": "skills/orch/scripts/lib/records.ts",
+      "destination": ".agents/skills/orch/scripts/lib/records.ts",
+      "mode": "copy",
+      "hash": "d1fed9bf9d0d0c7d059dd4f0cee2dd84da77a3f78eeda38730aff8af03150b95"
+    },
+    {
+      "source": "skills/orch/scripts/lib/store.ts",
+      "destination": ".agents/skills/orch/scripts/lib/store.ts",
+      "mode": "copy",
+      "hash": "95286005e0af8ba16d539c8ef03115aa63ff73e711c63347cde2b53307f45380"
+    },
+    {
+      "source": "skills/orch/scripts/lib/units.ts",
+      "destination": ".agents/skills/orch/scripts/lib/units.ts",
+      "mode": "copy",
+      "hash": "922a9f756e81f8cc3dbb996c80ee4dc57aaa507978f19fabb62fea5651de8079"
+    },
+    {
+      "source": "skills/orch/scripts/lib/validation.ts",
+      "destination": ".agents/skills/orch/scripts/lib/validation.ts",
+      "mode": "copy",
+      "hash": "20ea71963548fe856f7c12e6e7a677719abf64a8cda5418bb1fd286186619a4c"
+    },
+    {
+      "source": "skills/orch/scripts/package.json",
+      "destination": ".agents/skills/orch/scripts/package.json",
+      "mode": "copy",
+      "hash": "71a6343559f5c8ed96790f71356b6e0b4bee12f137c081f778a0beecec41d164"
+    },
+    {
+      "source": "skills/orch/scripts/run.ts",
+      "destination": ".agents/skills/orch/scripts/run.ts",
+      "mode": "copy",
+      "hash": "78cad4c5c36bce2492d1a816ec988a224bb301706a78ede738360eafa71f82f3"
+    },
+    {
+      "source": "skills/orch/scripts/task.ts",
+      "destination": ".agents/skills/orch/scripts/task.ts",
+      "mode": "copy",
+      "hash": "41d7d5dae18ae238ea6a6a80b527cddbf88cd80d69beccd064bd356c14ea5843"
+    },
+    {
+      "source": "skills/recall/LICENSE",
+      "destination": ".agents/skills/recall/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/recall/SKILL.md",
+      "destination": ".agents/skills/recall/SKILL.md",
+      "mode": "copy",
+      "hash": "8a3197e897e490c58f4ec346945e0731f3b030259a37cd0c10e82c6bec7a958e"
+    },
+    {
+      "source": "skills/reflect/LICENSE",
+      "destination": ".agents/skills/reflect/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/reflect/SKILL.md",
+      "destination": ".agents/skills/reflect/SKILL.md",
+      "mode": "copy",
+      "hash": "c827064d89f7e531462eb4d21942f7a62cbf46c8649441478225cb9152d8030f"
+    },
+    {
+      "source": "skills/reflect/references/approval.md",
+      "destination": ".agents/skills/reflect/references/approval.md",
+      "mode": "copy",
+      "hash": "8b02cb1d94791ac995c84d6d54b52420791f0f39bc78b73661981fa2d5b719e1"
+    },
+    {
+      "source": "skills/setup/SKILL.md",
+      "destination": ".agents/skills/setup/SKILL.md",
+      "mode": "copy",
+      "hash": "12c8648a7c50a4aab60c2976164fa91d29fd984c041a04896cf183b42d63af79"
+    },
+    {
+      "source": "skills/setup/references/setup.md",
+      "destination": ".agents/skills/setup/references/setup.md",
+      "mode": "copy",
+      "hash": "5a7421d0b6d5163cc033258febee7ec6112fa147f946213a2aa45624f47752f6"
+    },
+    {
+      "source": "skills/setup/scripts/bootstrap.ts",
+      "destination": ".agents/skills/setup/scripts/bootstrap.ts",
+      "mode": "copy",
+      "hash": "6642d472f47cc3a93664bb1949a9edc5c78ac259713093fa94a9b7c8c9bb2f08"
+    },
+    {
+      "source": "skills/setup/scripts/cli.ts",
+      "destination": ".agents/skills/setup/scripts/cli.ts",
+      "mode": "copy",
+      "hash": "49ecd76ab101566fa674df8566b111b86dd879b3d6241810f35eb4844ef42cf5"
+    },
+    {
+      "source": "skills/setup/scripts/lib/files.ts",
+      "destination": ".agents/skills/setup/scripts/lib/files.ts",
+      "mode": "copy",
+      "hash": "7dfe48c64effdfb0190a65ff781f7a859e6a6ee78988a972ff6c3505a2923c1d"
+    },
+    {
+      "source": "skills/setup/scripts/lib/index.ts",
+      "destination": ".agents/skills/setup/scripts/lib/index.ts",
+      "mode": "copy",
+      "hash": "ce2a1b103a1ac260ae8efd719c611557fd22fd1c71c252a73016c54b6e5d53c2"
+    },
+    {
+      "source": "skills/setup/scripts/lib/model.ts",
+      "destination": ".agents/skills/setup/scripts/lib/model.ts",
+      "mode": "copy",
+      "hash": "0771b9c4127531268ef9009fda9ab89828dfd88661a4ad87dfac658075bf1c9d"
+    },
+    {
+      "source": "skills/setup/scripts/lib/setup.ts",
+      "destination": ".agents/skills/setup/scripts/lib/setup.ts",
+      "mode": "copy",
+      "hash": "2f57fa51fe62b14375f97aea8bc9913779ca3e53cc7863fbecb9ea07b20ccef3"
+    },
+    {
+      "source": "skills/setup/scripts/lib/validation.ts",
+      "destination": ".agents/skills/setup/scripts/lib/validation.ts",
+      "mode": "copy",
+      "hash": "4dec6d4c0270cf221401e961bea4085231abefdeff19b2bc2d087cb73f84bc27"
+    },
+    {
+      "source": "skills/setup/scripts/package.json",
+      "destination": ".agents/skills/setup/scripts/package.json",
+      "mode": "copy",
+      "hash": "915983440e9b4a546fd831b6689ad53b644144f8e778fe3fa44414061af3b88d"
+    },
+    {
+      "source": "skills/setup/scripts/setup.ts",
+      "destination": ".agents/skills/setup/scripts/setup.ts",
+      "mode": "copy",
+      "hash": "da91a783d9d33ef87dab7ca6c4745f37f9fb54f3cd65aaae440e50980c92ba99"
+    },
+    {
+      "source": "skills/show-me-your-work/LICENSE",
+      "destination": ".agents/skills/show-me-your-work/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/show-me-your-work/SKILL.md",
+      "destination": ".agents/skills/show-me-your-work/SKILL.md",
+      "mode": "copy",
+      "hash": "4fea23a1da072932d9a6a75855e479a890ecbdd64e77421729e826e7531f6f29"
+    },
+    {
+      "source": "skills/show-me-your-work/assets/decision-log-template.tsv",
+      "destination": ".agents/skills/show-me-your-work/assets/decision-log-template.tsv",
+      "mode": "copy",
+      "hash": "c5b9c5d8cd584f8562540b3cd936e559a37dfb0c8689cff48ca44ba0ffcd15e0"
+    },
+    {
+      "source": "skills/show-me-your-work/references/log-format.md",
+      "destination": ".agents/skills/show-me-your-work/references/log-format.md",
+      "mode": "copy",
+      "hash": "aaf01cfa92047bee2f96bf66c121a780d791ac11b2d3f6e2645ada0295a02332"
+    },
+    {
+      "source": "skills/system-blueprint/LICENSE",
+      "destination": ".agents/skills/system-blueprint/LICENSE",
+      "mode": "copy",
+      "hash": "e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823"
+    },
+    {
+      "source": "skills/system-blueprint/SKILL.md",
+      "destination": ".agents/skills/system-blueprint/SKILL.md",
+      "mode": "copy",
+      "hash": "531415da056f3510634516c68bde760f76fc73fcfe10f3d3bbddda020b70b8bd"
+    },
+    {
+      "source": "skills/system-blueprint/assets/blueprint-template.md",
+      "destination": ".agents/skills/system-blueprint/assets/blueprint-template.md",
+      "mode": "copy",
+      "hash": "456298617c5927256498c508c3462eed2f7a91c76fa80ea7b88cdf5200d1550b"
+    },
+    {
+      "source": "skills/system-blueprint/references/document-model.md",
+      "destination": ".agents/skills/system-blueprint/references/document-model.md",
+      "mode": "copy",
+      "hash": "f8a5bb17e2444477873848b0559131ff6b06a3617dc979c29517c38bf903609b"
+    },
+    {
+      "source": "skills/tdd/LICENSE",
+      "destination": ".agents/skills/tdd/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/tdd/SKILL.md",
+      "destination": ".agents/skills/tdd/SKILL.md",
+      "mode": "copy",
+      "hash": "f2c09ca1e4d337b1324457e7ea252e58db6b94465351b4674848a35a378d06ff"
+    },
+    {
+      "source": "skills/teach/LICENSE",
+      "destination": ".agents/skills/teach/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/teach/SKILL.md",
+      "destination": ".agents/skills/teach/SKILL.md",
+      "mode": "copy",
+      "hash": "03a1678c249fff74621a4596ff0dc58a47c8640996e69d4e129e5063300d89cd"
+    },
+    {
+      "source": "skills/technical-writing/LICENSE",
+      "destination": ".agents/skills/technical-writing/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/technical-writing/SKILL.md",
+      "destination": ".agents/skills/technical-writing/SKILL.md",
+      "mode": "copy",
+      "hash": "8b70e455f7e143349ae92b7c36cc6de7f3c5ac58a199a75cd35458d7ad80c349"
+    },
+    {
+      "source": "skills/unslop/LICENSE",
+      "destination": ".agents/skills/unslop/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/unslop/SKILL.md",
+      "destination": ".agents/skills/unslop/SKILL.md",
+      "mode": "copy",
+      "hash": "885d50b5f3575f1882307b8ab5d2c72e5620026758eed9149416bbe1e4087a15"
+    },
+    {
+      "source": "skills/use-principles/LICENSE",
+      "destination": ".agents/skills/use-principles/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/use-principles/SKILL.md",
+      "destination": ".agents/skills/use-principles/SKILL.md",
+      "mode": "copy",
+      "hash": "ae4bd4a75151036568bfb07caeacc9cf95c6b91269e921c06e232a5e416e19ae"
+    },
+    {
+      "source": "skills/why/LICENSE",
+      "destination": ".agents/skills/why/LICENSE",
+      "mode": "copy",
+      "hash": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e"
+    },
+    {
+      "source": "skills/why/SKILL.md",
+      "destination": ".agents/skills/why/SKILL.md",
+      "mode": "copy",
+      "hash": "22ae5e263cdf58b81ed8a4a347e67d156c248a5b184cda5afc63c8ce952ee42e"
+    },
+    {
+      "source": "skills/why/references/epistemics.md",
+      "destination": ".agents/skills/why/references/epistemics.md",
+      "mode": "copy",
+      "hash": "87c4ea6e276819dd1e427034a492b33c20bc714e4c03b3d1c4a48ed16383c16d"
+    },
+    {
+      "source": "skills/why/references/investigator-prompt.md",
+      "destination": ".agents/skills/why/references/investigator-prompt.md",
+      "mode": "copy",
+      "hash": "caa6d4ccee67bd480da42c578ecf0357965f8b88d67eb1bddc3a08d4bd7ead87"
+    },
+    {
+      "source": "skills/why/references/source-playbook.md",
+      "destination": ".agents/skills/why/references/source-playbook.md",
+      "mode": "copy",
+      "hash": "a6cf0942f6372d9b33838bf133132bffb443f312a54dcea1cd3f895e76a9c778"
+    },
+    {
+      "source": "skills/why/references/sources/code-archaeology.md",
+      "destination": ".agents/skills/why/references/sources/code-archaeology.md",
+      "mode": "copy",
+      "hash": "fcbdfc43a4e10d06b68123aecfbccbe45083ba56431e2f6e7c20d35184bb075f"
+    },
+    {
+      "source": "skills/why/references/sources/incident-postmortem.md",
+      "destination": ".agents/skills/why/references/sources/incident-postmortem.md",
+      "mode": "copy",
+      "hash": "1d514946552d868cae83fba0afb7bcf106108d220a4427e2009f33bc7da191dd"
+    },
+    {
+      "source": "skills/why/references/sources/okf.md",
+      "destination": ".agents/skills/why/references/sources/okf.md",
+      "mode": "copy",
+      "hash": "8f96975874c38bd7460a0a2e22d3987b9515d10165ef006adee0ba4bb3afc8b7"
+    },
+    {
+      "source": "skills/why/references/synthesizer-prompt.md",
+      "destination": ".agents/skills/why/references/synthesizer-prompt.md",
+      "mode": "copy",
+      "hash": "03d8d70ed4ac7ec51b4d8e4fcec6ee569b13aab3bea5d65b3e54397a868688ce"
+    },
+    {
+      "source": "skills/yomiyasu/LICENSE",
+      "destination": ".agents/skills/yomiyasu/LICENSE",
+      "mode": "copy",
+      "hash": "79d802f15bc8caf67f1a83c1bdbe214ccb41a0a0275f9046b329b89c65ee1fca"
+    },
+    {
+      "source": "skills/yomiyasu/SKILL.md",
+      "destination": ".agents/skills/yomiyasu/SKILL.md",
+      "mode": "copy",
+      "hash": "0a8915986b0228abdf137d00f8e35959336f1914d36dfb73f1e8c053357209cf"
+    },
+    {
+      "source": "skills/yomiyasu/UNICODE-LICENSE.txt",
+      "destination": ".agents/skills/yomiyasu/UNICODE-LICENSE.txt",
+      "mode": "copy",
+      "hash": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    {
+      "source": "skills/yomiyasu/assets/algo-artis.png",
+      "destination": ".agents/skills/yomiyasu/assets/algo-artis.png",
+      "mode": "copy",
+      "hash": "57c7c204d43d0e2873e3b61221db3ac4ba75a7ce29271a6deaeb3bd09f26fdec"
+    },
+    {
+      "source": "skills/yomiyasu/references/domains/business.md",
+      "destination": ".agents/skills/yomiyasu/references/domains/business.md",
+      "mode": "copy",
+      "hash": "b9970281b5005bbbc998d5de9b9e6b2bc1bb83976b3862c0556425a142f4352c"
+    },
+    {
+      "source": "skills/yomiyasu/references/domains/essay.md",
+      "destination": ".agents/skills/yomiyasu/references/domains/essay.md",
+      "mode": "copy",
+      "hash": "8c0dc2afe132299ad111d4e3bc004d75da6291dc4857328717dc63ba5c9c6740"
+    },
+    {
+      "source": "skills/yomiyasu/references/domains/tech.md",
+      "destination": ".agents/skills/yomiyasu/references/domains/tech.md",
+      "mode": "copy",
+      "hash": "255b1bcbf42a0c7ea7f42c7293cd964e541d70f6f5079ebcbffc332ce6b7b0dd"
+    },
+    {
+      "source": "skills/yomiyasu/references/gemini-syntax.md",
+      "destination": ".agents/skills/yomiyasu/references/gemini-syntax.md",
+      "mode": "copy",
+      "hash": "7685424e9f63cd0d45c0fca673eabd10d7879f29e220b7d8517e73fcd2a9b6e7"
+    },
+    {
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "destination": ".agents/skills/yomiyasu/references/slop-catalog.md",
+      "mode": "copy",
+      "hash": "e7791d123db2573f50ee922c51f7d50694ab7e6b81f318713e9f405fe3c6daf2"
+    },
+    {
+      "source": "skills/yomiyasu/scripts/markdown_visibility.py",
+      "destination": ".agents/skills/yomiyasu/scripts/markdown_visibility.py",
+      "mode": "copy",
+      "hash": "7e6f739114bc28b132aa8e2bcfb51c7de7f441c12a54431c7248b5353a9966bb"
+    },
+    {
+      "source": "skills/yomiyasu/scripts/yomiyasu_diff.py",
+      "destination": ".agents/skills/yomiyasu/scripts/yomiyasu_diff.py",
+      "mode": "copy",
+      "hash": "b704e088fd6e1b01c21fb6b97373cc21d441cb14e976f3a47a95c3ba1c73a964"
+    },
+    {
+      "source": "skills/yomiyasu/scripts/yomiyasu_lint.py",
+      "destination": ".agents/skills/yomiyasu/scripts/yomiyasu_lint.py",
+      "mode": "copy",
+      "hash": "299a61970e8c30092f947e2ace95e80ff8a513fac87824363f89ba77e6cac468"
+    }
+  ],
+  "scope": "project"
+}

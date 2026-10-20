@@ -1,0 +1,7 @@
+{
+  "input": "hello from my local project",
+  "output": "HELLO FROM MY LOCAL PROJECT",
+  "platform": "linux",
+  "hostname": "localhost",
+  "cwd": "/workspace"
+}

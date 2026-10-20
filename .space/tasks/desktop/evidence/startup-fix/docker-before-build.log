@@ -1,0 +1,48 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 784B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for public.ecr.aws/docker/library/node:24-bookworm-slim
+#2 DONE 1.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 121B done
+#4 DONE 0.0s
+
+#5 [1/7] FROM public.ecr.aws/docker/library/node:24-bookworm-slim@sha256:a5f4366e834695d5f363b920c104953a535d3a9864d1bdf74566a0ebe01daee5
+#5 resolve public.ecr.aws/docker/library/node:24-bookworm-slim@sha256:a5f4366e834695d5f363b920c104953a535d3a9864d1bdf74566a0ebe01daee5 done
+#5 DONE 0.0s
+
+#6 [2/7] RUN apt-get update     && apt-get install -y --no-install-recommends openssh-server rsync git ca-certificates util-linux curl         tigervnc-standalone-server tigervnc-tools xfce4 xfce4-terminal chromium chromium-sandbox         dbus-x11 xauth x11-utils fonts-noto-cjk     && rm -rf /var/lib/apt/lists/*     && rm -f /etc/ssh/ssh_host_*     && usermod --password '*' node     && install -d -o node -g node -m 0755 /workspace
+#6 CACHED
+
+#7 [4/7] COPY --chown=node:node server.mjs ./
+#7 CACHED
+
+#8 [3/7] WORKDIR /app
+#8 CACHED
+
+#9 [6/7] COPY --chmod=0755 mvm-sshd /usr/local/bin/mvm-sshd
+#9 CACHED
+
+#10 [5/7] COPY --chown=node:node desktop.mjs ./
+#10 CACHED
+
+#11 [7/7] COPY --chmod=0755 mvm-desktop /usr/local/bin/mvm-desktop
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:cf75bba26b0eb17bfbe898e82bc14814e981947580a0ade24169a631c8b37952 done
+#12 exporting config sha256:4ce1a40845be8b7ac81c1ad106e01c1eae0c5617a0d34f614dc68ffc4a4de766 done
+#12 exporting attestation manifest sha256:a5ff15582d30d832efdb73dd8858fb00ebf85c4ac0e7bcbe4e2e21d83c31516f done
+#12 exporting manifest list sha256:eeaa04c075b6506a0a04d4bd7181906e84307d81257a8d51e2ee9a427180e5d7 done
+#12 naming to docker.io/library/lambda-microvms-link:startup-before done
+#12 unpacking to docker.io/library/lambda-microvms-link:startup-before done
+#12 DONE 0.0s

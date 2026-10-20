@@ -1,0 +1,103 @@
+{
+  "startedAt": "2026-10-20T01:49:41.989Z",
+  "vmId": "microvm-e6d59f20-ddc6-33b7-88fb-7ee193521664",
+  "steps": [
+    {
+      "label": "1. VMの状態",
+      "args": [
+        "status",
+        "microvm-e6d59f20-ddc6-33b7-88fb-7ee193521664",
+        "--json"
+      ],
+      "code": 0,
+      "signal": null,
+      "stdout": "{\"microvmId\":\"microvm-e6d59f20-ddc6-33b7-88fb-7ee193521664\",\"state\":\"RUNNING\",\"imageArn\":\"arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev\",\"imageVersion\":\"3.0\",\"startedAt\":\"2026-10-20T01:48:51.564Z\",\"endpoint\":\"1ed0ab7f-a0ca-4743-79db-2cc4014ac615.lambda-microvm.ap-northeast-1.on.aws\",\"maximumDurationInSeconds\":600}\n",
+      "stderr": ""
+    },
+    {
+      "label": "2. SSHでVMの環境を確認",
+      "args": [
+        "ssh",
+        "microvm-e6d59f20-ddc6-33b7-88fb-7ee193521664",
+        "--",
+        "sh",
+        "-lc",
+        "whoami; uname -s; cd /workspace && pwd"
+      ],
+      "code": 0,
+      "signal": null,
+      "stdout": "node\nLinux\n/workspace\n",
+      "stderr": ""
+    },
+    {
+      "label": "3. プロジェクトを/workspaceへ転送",
+      "args": [
+        "with-ssh",
+        "microvm-e6d59f20-ddc6-33b7-88fb-7ee193521664",
+        "--",
+        "sh",
+        "-c",
+        "rsync -av -e \"ssh -F \\\"$MVM_SSH_CONFIG\\\"\" \"$1/project/\" mvm:/workspace/",
+        "sh",
+        "/Users/const/sori883/lambda-microvms-link/work/ssh-demo-wtOwJT"
+      ],
+      "code": 0,
+      "signal": null,
+      "stdout": "Transfer starting: 3 files\n./\nmain.mjs\nmessage.txt\n\nsent 680 bytes  received 70 bytes  3987 bytes/sec\ntotal size is 438  speedup is 0.58\n",
+      "stderr": ""
+    },
+    {
+      "label": "4. VM内でプログラムを実行",
+      "args": [
+        "ssh",
+        "microvm-e6d59f20-ddc6-33b7-88fb-7ee193521664",
+        "--",
+        "sh",
+        "-lc",
+        "cd /workspace && node main.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "stdout": "{\n  \"input\": \"hello from my local project\",\n  \"output\": \"HELLO FROM MY LOCAL PROJECT\",\n  \"platform\": \"linux\",\n  \"hostname\": \"localhost\",\n  \"cwd\": \"/workspace\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "5. 結果を手元へ取得",
+      "args": [
+        "with-ssh",
+        "microvm-e6d59f20-ddc6-33b7-88fb-7ee193521664",
+        "--",
+        "sh",
+        "-c",
+        "scp -F \"$MVM_SSH_CONFIG\" mvm:/workspace/result.json \"$1/download/result.json\"",
+        "sh",
+        "/Users/const/sori883/lambda-microvms-link/work/ssh-demo-wtOwJT"
+      ],
+      "code": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "6. VMを終了",
+      "args": [
+        "stop",
+        "microvm-e6d59f20-ddc6-33b7-88fb-7ee193521664",
+        "--json"
+      ],
+      "code": 0,
+      "signal": null,
+      "stdout": "{\"microvmId\":\"microvm-e6d59f20-ddc6-33b7-88fb-7ee193521664\",\"state\":\"TERMINATED\",\"imageArn\":\"arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev\",\"imageVersion\":\"3.0\",\"startedAt\":\"2026-10-20T01:48:51.564Z\",\"endpoint\":\"1ed0ab7f-a0ca-4743-79db-2cc4014ac615.lambda-microvm.ap-northeast-1.on.aws\",\"maximumDurationInSeconds\":600,\"terminatedAt\":\"2026-10-20T01:49:58.958Z\",\"stateReason\":\"Success.\"}\n",
+      "stderr": ""
+    }
+  ],
+  "localDirectory": "/Users/const/sori883/lambda-microvms-link/work/ssh-demo-wtOwJT",
+  "result": {
+    "input": "hello from my local project",
+    "output": "HELLO FROM MY LOCAL PROJECT",
+    "platform": "linux",
+    "hostname": "localhost",
+    "cwd": "/workspace"
+  },
+  "finalState": "TERMINATED"
+}

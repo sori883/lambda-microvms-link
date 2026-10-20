@@ -1,0 +1,26 @@
+$ bun test tests/cli.test.ts tests/foundation.test.ts
+bun test v1.4.2 (744846f84)
+
+tests/foundation.test.ts:
+(pass) the real stack packages only image files and orders scoped build permissions before the image [570.65ms]
+(pass) image and SSH helper edits change the artifact URI; unrelated files do not, and a base version can be pinned [42.89ms]
+
+tests/cli.test.ts:
+(pass) CLI help/version and invalid inputs do not contact AWS; JSON usage errors exit 2 [612.17ms]
+(pass) real CLI signs environment/session credentials and gathers every list page [65.82ms]
+(pass) large JSON output is fully flushed before the CLI exits [98.96ms]
+(pass) image names resolve through every image page before start and filtered list; missing names never run a VM [154.68ms]
+(pass) shared profiles supply credentials and region; credential_process and AWS_PROFILE use the SDK chain [245.09ms]
+(pass) start waits for RUNNING with a stable client token and bounded lifetime, then stop waits for termination [2222.26ms]
+(pass) start --no-wait returns the known ID; timeout retains ID and token without terminating the VM [1111.84ms]
+(pass) SIGINT returns 130 and the known VM ID during start polling [91.04ms]
+(pass) uncertain start errors keep the retry token; AWS errors do not echo response secrets [63.80ms]
+(pass) missing credentials and missing region return actionable errors without AWS requests [92.70ms]
+(pass) the CLI process exits by its deadline even while credential_process is still running [1069.44ms]
+(pass) check scopes its token and HTTP request, rejects redirects, and suppresses response and transport secrets [34.79ms]
+(pass) shell access checks state and endpoint, requests a one-minute shell token, and rejects missing tokens [7.40ms]
+(pass) SSH rejects JSON and invalid keys without contacting AWS; failed preparation cleans temporary keys [177.06ms]
+
+ 16 pass
+ 0 fail
+Ran 16 tests across 2 files. [6.87s]

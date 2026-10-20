@@ -1,0 +1,13 @@
+{
+  "vmId": "microvm-6bc70953-2a0f-3a01-8031-3327f22bd0b4",
+  "initialSize": [
+    24,
+    80
+  ],
+  "resized": [
+    35,
+    100
+  ],
+  "ctrlC": true,
+  "exitCode": 0
+}

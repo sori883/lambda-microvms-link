@@ -1,0 +1,4 @@
+$ bun run build:desktop && bun build --compile ./src/main.ts --outfile dist/mvm
+$ bun scripts/build-desktop.ts
+  [18ms]  bundle  198 modules
+ [119ms] compile  dist/mvm

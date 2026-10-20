@@ -1,0 +1,4 @@
+{"at":1792482515043,"pid":109,"event":"supervise"}
+{"at":1792482516235,"pid":109,"event":"launch","name":"xvnc"}
+{"at":1792482516390,"pid":109,"event":"wait","component":"xvnc","limit":15000}
+{"at":1792482531604,"pid":109,"event":"stop","component":"xvnc","logs":{"xvnc":"_XSERVTransmkdir: ERROR: euid != 0,directory /tmp/.X11-unix will not be created.\n\nXvnc TigerVNC 1.12.0 - built 2023-01-06 16:01\nCopyright (C) 1999-2021 TigerVNC Team and many others (see README.rst)\nSee https://www.tigervnc.org for information on TigerVNC.\nUnderlying X server release 12101006, X.Org\n\n\nTue Oct 20 07:48:38 2026\n vncext:      VNC extension running!\n vncext:      Listening for VNC connections on /tmp/mvm-desktop-1000/vnc.sock\n              (mode 0600)\n vncext:      created VNC server for screen 0\n"}}

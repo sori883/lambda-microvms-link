@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MicroVM desktop</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/client.js"></script>
+</head>
+<body>
+  <header>
+    <strong>MicroVM desktop</strong>
+    <span id="status" role="status">Connecting…</span>
+    <nav>
+      <button id="reconnect" type="button">Reconnect</button>
+      <button id="fullscreen" type="button">Fullscreen</button>
+      <a href="/licenses.txt" target="_blank" rel="noreferrer">Licenses</a>
+    </nav>
+  </header>
+  <main id="screen" aria-label="Remote desktop"></main>
+</body>
+</html>

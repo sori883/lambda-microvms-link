@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-19T17:52:33.001Z",
+  "binarySha256": "9e1e91ec96be5871945e8245228765ab30603489ac5be859b0f427804ced0cf5",
+  "checks": [
+    {
+      "name": "health"
+    }
+  ],
+  "vms": [
+    {
+      "id": "microvm-62618eea-c291-3812-b799-bc82d46eb800",
+      "imageVersion": "2.0",
+      "finalState": "TERMINATED"
+    }
+  ]
+}

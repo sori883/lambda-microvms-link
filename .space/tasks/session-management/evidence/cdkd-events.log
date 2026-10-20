@@ -1,0 +1,7 @@
+[1mDeployment runs for[0m [36mMicrovmFoundation[0m [90m(ap-northeast-1)[0m
+  [36m20261020T032929628Z-b5d85954[0m  deploy  [32mSUCCEEDED[0m  [90m2026-10-20T03:29:29.628Z[0m -> [90m2026-10-20T03:31:34.240Z[0m  [90mcdkd 0.301.11[0m  [90m6 events[0m
+  [36m20261019T175733111Z-651f1d62[0m  deploy  [32mSUCCEEDED[0m  [90m2026-10-19T17:57:33.111Z[0m -> [90m2026-10-19T17:59:37.528Z[0m  [90mcdkd 0.301.11[0m  [90m6 events[0m
+  [36m20261019T175016613Z-4b3c5da0[0m  deploy  [32mSUCCEEDED[0m  [90m2026-10-19T17:50:16.613Z[0m -> [90m2026-10-19T17:52:12.261Z[0m  [90mcdkd 0.301.11[0m  [90m6 events[0m
+  [36m20261019T141532941Z-4bdafb6a[0m  deploy  [32mSUCCEEDED[0m  [90m2026-10-19T14:15:32.941Z[0m -> [90m2026-10-19T14:17:29.141Z[0m  [90mcdkd 0.301.11[0m  [90m8 events[0m
+[90m
+Read one run's events with: cdkd events MicrovmFoundation --run '<runId>'[0m

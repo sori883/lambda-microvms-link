@@ -1,0 +1,31 @@
+{
+  "bundle_path": "/Users/const/sori883/lambda-microvms-link/.space/babel",
+  "declared_version": "0.2",
+  "concept_count": 30,
+  "errors": [],
+  "warnings": [],
+  "gate_findings": [],
+  "broken_links": [],
+  "orphans": [
+    "principles/attack-the-premise",
+    "principles/build-the-lever",
+    "principles/encode-lessons-in-structure",
+    "principles/exhaust-the-design-space",
+    "principles/fix-root-causes",
+    "principles/foundational-thinking",
+    "principles/guard-the-context-window",
+    "principles/laziness-protocol",
+    "principles/migrate-callers-then-delete-legacy-apis",
+    "principles/minimize-reader-load",
+    "principles/model-the-domain",
+    "principles/never-block-on-the-human",
+    "principles/outcome-oriented-execution",
+    "principles/redesign-from-first-principles",
+    "principles/sequence-verifiable-units",
+    "principles/subtract-before-you-add",
+    "principles/type-system-discipline"
+  ],
+  "stale_count": 0,
+  "is_conformant": true,
+  "gate_passed": false
+}

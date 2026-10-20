@@ -1,0 +1,20 @@
+[
+  {
+    "session": "startup-fresh-a",
+    "imageVersion": "7.0",
+    "firstAttempt": true,
+    "ready": true,
+    "secondsToReady": 38.916,
+    "exitCode": null,
+    "stderr": "Desktop connection is active. Press Ctrl+C to disconnect; the VM stays running.\n"
+  },
+  {
+    "session": "startup-fresh-b",
+    "imageVersion": "7.0",
+    "firstAttempt": true,
+    "ready": true,
+    "secondsToReady": 35.711,
+    "exitCode": null,
+    "stderr": "Desktop connection is active. Press Ctrl+C to disconnect; the VM stays running.\n"
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "create": {
+    "id": "e6acd635-e92a-4d24-b75a-d0746e916a49",
+    "name": "fresh-image",
+    "project": "/Users/const/sori883/lambda-microvms-link/work/ssh-demo-wtOwJT/project",
+    "accountId": "242201303782",
+    "region": "ap-northeast-1",
+    "profile": "AdministratorAccess-242201303782",
+    "microvmId": "microvm-0724cf0e-bb5b-3e03-9d8c-c8e43e6426e5",
+    "state": "RUNNING",
+    "pending": null,
+    "desired": "running",
+    "observedAt": "2026-10-20T03:32:51.383Z",
+    "expiresAt": "2026-10-20T03:47:49.175Z"
+  },
+  "vm": {
+    "microvmId": "microvm-0724cf0e-bb5b-3e03-9d8c-c8e43e6426e5",
+    "state": "RUNNING",
+    "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+    "imageVersion": "4.0",
+    "startedAt": "2026-10-20T03:32:49.175Z",
+    "endpoint": "90d0abaf-37ac-6703-eccf-7a96bbb7384f.lambda-microvm.ap-northeast-1.on.aws",
+    "maximumDurationInSeconds": 900
+  },
+  "ssh": {
+    "exitCode": 0,
+    "stdout": "/usr/bin/curl\nclean-image-ok\n",
+    "stderr": ""
+  },
+  "codeStatus": {
+    "exitCode": 0,
+    "lines": [
+      "OS Version:       Darwin arm64 25.5.0",
+      "    0\t70368744178\t 29295\twindow [1] (Welcome — workspace [SSH: mvm-e6acd635-e92a-4d24-b75a-d0746e916a49])",
+      "Remote:           SSH: mvm-e6acd635-e92a-4d24-b75a-d0746e916a49",
+      "OS Version:       Linux arm64 6.1.166-24.303.amzn2023.aarch64",
+      "Folder (workspace): 0 files"
+    ]
+  },
+  "binarySha256": "d6ec471dcd8ada4ad310744a7de9524ce3e0c5cc8b2b3c7d982feec723e3e751",
+  "reconnectAfterCode": {
+    "exitCode": 0,
+    "stdout": "reconnect-after-code-ok\n",
+    "stderr": ""
+  },
+  "userSettingsUnchanged": true,
+  "stop": {
+    "exitCode": 0,
+    "result": {
+      "id": "e6acd635-e92a-4d24-b75a-d0746e916a49",
+      "name": "fresh-image",
+      "project": "/Users/const/sori883/lambda-microvms-link/work/ssh-demo-wtOwJT/project",
+      "accountId": "242201303782",
+      "region": "ap-northeast-1",
+      "profile": "AdministratorAccess-242201303782",
+      "microvmId": "microvm-0724cf0e-bb5b-3e03-9d8c-c8e43e6426e5",
+      "state": "TERMINATED",
+      "pending": null,
+      "desired": "terminated",
+      "observedAt": "2026-10-20T03:35:06.277Z",
+      "expiresAt": "2026-10-20T03:47:49.175Z"
+    },
+    "stderr": ""
+  },
+  "sshFilesRemoved": true,
+  "ownedCodeWindowClosed": true
+}

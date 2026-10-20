@@ -1,0 +1,23 @@
+{
+  "src/cli.ts": "860bbb7aad4df630535b20c819d6f611b246cf6c0bbf0458673e1f691bcf7d5f",
+  "src/desktop.ts": "3d9af1d151697fd1fbcecb7cc0a4196c2ff83ce526f5578a8d0be9a5c2cb7aef",
+  "src/desktop-client/client.ts": "36393222eb42362d4d36203f3e57155104014ddc62d5d4943bbc812f0fc7288f",
+  "src/desktop-client/index.html": "62e99ef67c052df3fe79acf62e2d9eea66ed35b6a19c65fb97d21dfacc514998",
+  "src/desktop-client/style.css": "b137ba0c7d3330bc4de3934e93dc55a459ac8da82972f8990870989df9c5b7a5",
+  "scripts/build-desktop.ts": "1e7c165ff07fc4ad9c0cd32f8632f6b9f8f7dc5355c4ec0077c8836b4b3ac6ea",
+  "image/Dockerfile": "0b2268c591407da90c7384b168c0003f762dd06e8d462d177aeb2797cce08a86",
+  "image/desktop.mjs": "e967b552cf6dc32cd7598451febca2edad3533b3c3796bb1a2f497513d1ee63a",
+  "image/mvm-desktop": "d1b8806cf04ddbceed06be2951571e78aa1b923eb481eee26364fa8fb5b856fc",
+  "infra/microvm-foundation-stack.ts": "9d51563f698865cc40f8afe8dad0410e8a27a2df3db2d961636dbc23e764a89c",
+  "tests/desktop.test.ts": "c09add3ecb92a70a1db6cd8ebea8af5864751e3aa7bc5c70b4216115977f7dfb",
+  "tests/image-desktop.test.ts": "f48bed1bf89de4933194618fa1c8a254453ad1b5b8b5181e3d7156268ca65a68",
+  "tests/cli.test.ts": "035d72a57f29e50af8bb4c7a1186355ba25e7fc4c3e633ca5406cf02bc239d16",
+  "tests/foundation.test.ts": "1679f3e459cb72a520dd31521074b8ebc364e286d3f7b38623f67584e8b8e645",
+  "package.json": "7c6d8967d8565bb6519945aa4d191d947d6d1fff677a5acb8f8c613ad3377ca7",
+  "bun.lock": "56ee5f645b7c2c296f25a6da4d9c35582aa58c1668c50517ae195b482c9fee07",
+  "dist/mvm": "06ca0aa9fcd3259491c8a46155d2fc8f8831a1308ad41a25c1a4264d5cced241",
+  "src/desktop-assets/index.html.asset": "62e99ef67c052df3fe79acf62e2d9eea66ed35b6a19c65fb97d21dfacc514998",
+  "src/desktop-assets/client.js.asset": "0380b6f75c1cf0ff432eb097134c5fccdc2806df070d8a195444e0763ff24192",
+  "src/desktop-assets/style.css.asset": "b137ba0c7d3330bc4de3934e93dc55a459ac8da82972f8990870989df9c5b7a5",
+  "src/desktop-assets/licenses.txt.asset": "c29caf606ecb754309539f17b422f7456b9ad9385c7a65ba3f1a009f386a96ee"
+}

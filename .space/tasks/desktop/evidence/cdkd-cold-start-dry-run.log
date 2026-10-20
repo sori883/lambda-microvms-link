@@ -1,0 +1,16 @@
+$ cdkd deploy MicrovmFoundation --dry-run
+[36mSynthesizing CDK app...[0m
+
+[36mDeploying stack:[0m [1m[36mMicrovmFoundation[0m[0m
+Changes: [32m0[0m to create, [33m2[0m to update, [31m0[0m to delete
+Dry run mode - skipping actual deployment
+
+[1mDeployment Summary:[0m
+  Stack: [1m[36mMicrovmFoundation[0m[0m
+  Created: [90m0[0m
+  Updated: [33m2[0m
+  Deleted: [90m0[0m
+  Unchanged: [90m1[0m
+  Duration: [36m0.71s[0m
+
+[32m✓[0m [1mDry run completed[0m - no actual changes made

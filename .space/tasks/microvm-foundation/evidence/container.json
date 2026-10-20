@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-19T12:05:57.484348+00:00",
+  "result": "passed",
+  "imageId": "sha256:a63b4a5c430de76cb7a80283a3a7c40dd40e19514e1993de72e0b59a81378400",
+  "containerBaseDigest": "public.ecr.aws/docker/library/node@sha256:44fce696f38ba8c987c4db89954051000bbd05ffd8d8659ba15ed4a8602e937f",
+  "architecture": "arm64",
+  "runtimeUid": "1000",
+  "httpChecks": [
+    {
+      "path": "/health",
+      "method": "GET",
+      "status": 200,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "path": "/aws/lambda-microvms/runtime/v1/ready",
+      "method": "POST",
+      "status": 200,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "path": "/aws/lambda-microvms/runtime/v1/validate",
+      "method": "POST",
+      "status": 200,
+      "body": {
+        "status": "ok"
+      }
+    }
+  ],
+  "awsDeploymentTested": false,
+  "snapshotRestoreTested": false,
+  "testContainerRemoved": true
+}

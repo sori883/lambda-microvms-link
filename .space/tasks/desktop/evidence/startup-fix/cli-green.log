@@ -1,0 +1,18 @@
+$ bun test tests/desktop.test.ts
+bun test v1.4.2 (744846f84)
+
+tests/desktop.test.ts:
+(pass) desktop serves embedded assets and requires exact browser authorization before SSH [249.31ms]
+(pass) authenticated desktop bytes round-trip with backpressure and connection count is bounded [234.95ms]
+(pass) text and oversized desktop frames are refused and SSH children are collected [192.86ms]
+(pass) desktop input buffering is bounded when SSH stops reading [670.17ms]
+(pass) a slow viewer backpressures its SSH producer and cancellation removes the listener and child [479.25ms]
+(pass) aborted desktop preparation kills a stubborn SSH process group before publishing readiness [686.10ms]
+(pass) desktop rejects old images and invalid or oversized readiness without leaking raw output [478.40ms]
+(pass) a browser opener ignoring SIGTERM is killed at its launch deadline [10155.93ms]
+(pass) desktop reports the failed VM startup component without forwarding arbitrary diagnostics [338.42ms]
+(pass) the standalone desktop executable serves its client and license assets from another directory [1272.23ms]
+
+ 10 pass
+ 0 fail
+Ran 10 tests across 1 file. [14.78s]

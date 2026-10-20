@@ -1,0 +1,33 @@
+{
+  "stackName": "MicrovmFoundation",
+  "region": "ap-northeast-1",
+  "runs": [
+    {
+      "runId": "20261019T175733111Z-651f1d62",
+      "command": "deploy",
+      "cdkdVersion": "0.301.11",
+      "startedAt": "2026-10-19T17:57:33.111Z",
+      "finishedAt": "2026-10-19T17:59:37.528Z",
+      "result": "SUCCEEDED",
+      "eventCount": 6
+    },
+    {
+      "runId": "20261019T175016613Z-4b3c5da0",
+      "command": "deploy",
+      "cdkdVersion": "0.301.11",
+      "startedAt": "2026-10-19T17:50:16.613Z",
+      "finishedAt": "2026-10-19T17:52:12.261Z",
+      "result": "SUCCEEDED",
+      "eventCount": 6
+    },
+    {
+      "runId": "20261019T141532941Z-4bdafb6a",
+      "command": "deploy",
+      "cdkdVersion": "0.301.11",
+      "startedAt": "2026-10-19T14:15:32.941Z",
+      "finishedAt": "2026-10-19T14:17:29.141Z",
+      "result": "SUCCEEDED",
+      "eventCount": 8
+    }
+  ]
+}

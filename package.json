@@ -1,0 +1,42 @@
+{
+  "name": "lambda-microvms-link",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.2",
+  "bin": {
+    "mvm": "src/main.ts"
+  },
+  "scripts": {
+    "cli": "bun src/main.ts",
+    "build": "bun run build:desktop && bun build --compile ./src/main.ts --outfile dist/mvm",
+    "build:desktop": "bun scripts/build-desktop.ts",
+    "verify:desktop-assets": "bun scripts/build-desktop.ts --check",
+    "cdkd": "cdkd",
+    "synth": "bun run infra/app.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "verify": "bun run verify:desktop-assets && bun run typecheck && bun run test",
+    "verify:cdkd": "bun scripts/verify-cdkd.mjs"
+  },
+  "engines": {
+    "bun": ">=1.4.2"
+  },
+  "devDependencies": {
+    "@go-to-k/cdkd": "0.301.11",
+    "@novnc/novnc": "1.7.0",
+    "@types/bun": "1.4.3",
+    "@types/node": "24.19.2",
+    "@types/ws": "8.18.2",
+    "aws-cdk-lib": "2.273.0",
+    "constructs": "10.8.1",
+    "typescript": "6.0.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-lambda-microvms": "3.1152.0",
+    "@aws-sdk/client-sts": "3.1152.0",
+    "commander": "14.0.3",
+    "jsonc-parser": "3.3.1",
+    "ws": "8.22.0"
+  }
+}

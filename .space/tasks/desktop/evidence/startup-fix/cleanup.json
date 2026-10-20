@@ -1,0 +1,15 @@
+{
+  "connections": [
+    {
+      "session": "startup-fresh-a",
+      "cliRunning": false,
+      "listenerOpen": false
+    },
+    {
+      "session": "startup-fresh-b",
+      "cliRunning": false,
+      "listenerOpen": false
+    }
+  ],
+  "sshIdentitiesRemaining": 0
+}

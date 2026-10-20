@@ -1,0 +1,48 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 784B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for public.ecr.aws/docker/library/node:24-bookworm-slim
+#2 DONE 0.9s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 14.62kB done
+#4 DONE 0.0s
+
+#5 [1/7] FROM public.ecr.aws/docker/library/node:24-bookworm-slim@sha256:a5f4366e834695d5f363b920c104953a535d3a9864d1bdf74566a0ebe01daee5
+#5 resolve public.ecr.aws/docker/library/node:24-bookworm-slim@sha256:a5f4366e834695d5f363b920c104953a535d3a9864d1bdf74566a0ebe01daee5 0.0s done
+#5 DONE 0.0s
+
+#6 [3/7] WORKDIR /app
+#6 CACHED
+
+#7 [2/7] RUN apt-get update     && apt-get install -y --no-install-recommends openssh-server rsync git ca-certificates util-linux curl         tigervnc-standalone-server tigervnc-tools xfce4 xfce4-terminal chromium chromium-sandbox         dbus-x11 xauth x11-utils fonts-noto-cjk     && rm -rf /var/lib/apt/lists/*     && rm -f /etc/ssh/ssh_host_*     && usermod --password '*' node     && install -d -o node -g node -m 0755 /workspace
+#7 CACHED
+
+#8 [4/7] COPY --chown=node:node server.mjs ./
+#8 CACHED
+
+#9 [5/7] COPY --chown=node:node desktop.mjs ./
+#9 DONE 0.0s
+
+#10 [6/7] COPY --chmod=0755 mvm-sshd /usr/local/bin/mvm-sshd
+#10 DONE 0.0s
+
+#11 [7/7] COPY --chmod=0755 mvm-desktop /usr/local/bin/mvm-desktop
+#11 DONE 0.0s
+
+#12 exporting to image
+#12 exporting layers 0.0s done
+#12 exporting manifest sha256:8f76aae1199b56ba631566ac33f7528d86de0d468782defd36faa15f84ddfd43 done
+#12 exporting config sha256:45b3de2e5e6e85cfc585222bca29ff89c006b4736bf9a229b3553dc83e850462 done
+#12 exporting attestation manifest sha256:e6bfa3b873c20913b1e5071b654ad70e5461fa883b38dc4840809b3ad4efb55c done
+#12 exporting manifest list sha256:f4d668537af9868a6f86c3a8ee6e689c1eed149c3da36aa3a956957cef7acea7 done
+#12 naming to docker.io/library/lambda-microvms-link:startup-fixed done
+#12 unpacking to docker.io/library/lambda-microvms-link:startup-fixed 0.0s done
+#12 DONE 0.1s

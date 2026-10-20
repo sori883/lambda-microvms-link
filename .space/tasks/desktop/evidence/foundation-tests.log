@@ -1,0 +1,10 @@
+$ bun test tests/foundation.test.ts
+bun test v1.4.2 (744846f84)
+
+tests/foundation.test.ts:
+(pass) the real stack packages only image files and orders scoped build permissions before the image [562.87ms]
+(pass) image and SSH helper edits change the artifact URI; unrelated files do not, and a base version can be pinned [45.72ms]
+
+ 2 pass
+ 0 fail
+Ran 2 tests across 1 file. [903.00ms]

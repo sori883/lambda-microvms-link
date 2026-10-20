@@ -1,0 +1,33 @@
+$ bun test tests/image-desktop.test.ts --test-name-pattern "window probe"
+bun test v1.4.2 (744846f84)
+
+tests/image-desktop.test.ts:
+252 |     `]);
+253 |     const result = await exec('docker', ['exec', container, helper, 'ensure'], { timeout: 8_000 }).then(
+254 |       value => ({ ...value, code: 0 }),
+255 |       error => ({ stdout: error.stdout, stderr: error.stderr, code: error.code }),
+256 |     );
+257 |     assert.equal(result.code, 1);
+                 ^
+AssertionError: Expected values to be strictly equal:
+
+0 !== 1
+
+ generatedMessage: true,
+     actual: 0,
+   expected: 1,
+   operator: "strictEqual",
+       diff: "simple",
+       code: "ERR_ASSERTION"
+
+      at /Users/const/sori883/lambda-microvms-link/tests/image-desktop.test.ts:257:12
+      at node:test:1445:26
+      at executeTestNode (node:test:1448:63)
+      at processTicksAndRejections (native:7:39)
+(fail) Docker desktop detects Chromium exiting while its window probe is still pending [8353.00ms]
+
+ 0 pass
+ 4 filtered out
+ 1 fail
+Ran 1 test across 1 file. [8.36s]
+error: script "test" exited with code 1

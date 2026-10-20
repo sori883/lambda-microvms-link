@@ -1,0 +1,22 @@
+$ cdkd deploy MicrovmFoundation --full-wait
+[36mSynthesizing CDK app...[0m
+
+[36mDeploying stack:[0m [1m[36mMicrovmFoundation[0m[0m
+Changes: [32m0[0m to create, [33m2[0m to update, [31m0[0m to delete
+[36mDeploying[0m [36m2[0m resource(s) (DAG: 3 levels, max parallel: 10)
+[1/2] [33m✓[0m [1mBuildRole[0m [90m(AWS::IAM::Role)[0m [33mupdated[0m
+[2/2] [33m✓[0m [1mImage[0m [90m(AWS::Lambda::MicrovmImage)[0m [33mupdated[0m
+
+[1mDeployment Summary:[0m
+  Stack: [1m[36mMicrovmFoundation[0m[0m
+  Created: [90m0[0m
+  Updated: [33m2[0m
+  Deleted: [90m0[0m
+  Unchanged: [90m1[0m
+  Duration: [36m174.76s[0m
+
+Outputs:
+  MicrovmFoundation.ImageArn = arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev
+  MicrovmFoundation.BuildLogGroupName = /aws/lambda-microvms/lambda-microvms-link-dev
+
+[32m✓[0m [1mDeployment completed successfully[0m

@@ -1,0 +1,8 @@
+{
+  "imageVersion": "5.0",
+  "session": "desktop-check",
+  "attempt": "first",
+  "exitCode": 1,
+  "error": "DesktopStartFailed:chromium",
+  "note": "最初のensure失敗。後続の同一VMでの成功はaws-desktop-reused.json、修正後の新VM初回成功はaws-fresh-desktop.json。"
+}

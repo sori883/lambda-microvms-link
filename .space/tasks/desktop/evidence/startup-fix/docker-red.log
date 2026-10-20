@@ -1,0 +1,33 @@
+$ bun test tests/image-desktop.test.ts --test-name-pattern "slow display"
+bun test v1.4.2 (744846f84)
+
+tests/image-desktop.test.ts:
+1076 |   if (!isURLInstance(fileURLOrPath))
+1077 |     return fileURLOrPath;
+1078 |   return Bun.fileURLToPath(fileURLOrPath);
+1079 | }
+1080 | var { Error, TypeError } = globalThis;
+1081 |   let err = new Error(message);
+                   ^
+error: Command failed: docker exec efe250012260b20af44ef63fd16e2d38040aceee485829dfa643c9bbeaacc3b9 /usr/local/bin/mvm-desktop ensure
+DesktopStartFailed:xvnc
+
+   code: 1,
+ killed: false,
+ signal: null,
+    cmd: "docker exec efe250012260b20af44ef63fd16e2d38040aceee485829dfa643c9bbeaacc3b9 /usr/local/bin/mvm-desktop ensure",
+ stdout: "",
+ stderr: "DesktopStartFailed:xvnc\n",
+
+      at genericNodeError (node:child_process:1081:13)
+      at exitHandler (node:child_process:115:28)
+      at emit (node:events:124:23)
+      at #maybeClose (node:child_process:827:16)
+      at #handleOnExit (node:child_process:570:72)
+(fail) Docker desktop allows slow display and settings startup within the overall preparation deadline [16203.44ms]
+
+ 0 pass
+ 3 filtered out
+ 1 fail
+Ran 1 test across 1 file. [16.22s]
+error: script "test" exited with code 1

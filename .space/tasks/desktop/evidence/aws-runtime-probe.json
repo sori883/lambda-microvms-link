@@ -1,0 +1,53 @@
+{
+  "processes": [
+    {
+      "pid": 708,
+      "executable": "/usr/bin/Xtigervnc",
+      "role": "main",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "0          0 4294967295"
+    },
+    {
+      "pid": 723,
+      "executable": "xfce4-session",
+      "role": "main",
+      "sandboxDisabled": false,
+      "uid": "1000\t1000\t1000\t1000",
+      "noNewPrivileges": "1",
+      "seccomp": "0",
+      "uidMap": "0          0 4294967295"
+    }
+  ],
+  "paths": {
+    "/tmp/mvm-desktop-1000": {
+      "uid": 1000,
+      "mode": "700",
+      "socket": false
+    },
+    "/tmp/mvm-desktop-1000/vnc.sock": {
+      "uid": 1000,
+      "mode": "600",
+      "socket": true
+    },
+    "/tmp/mvm-desktop-1000/control.sock": {
+      "uid": 1000,
+      "mode": "600",
+      "socket": true
+    }
+  },
+  "tcpListenPorts": [
+    53,
+    1144,
+    53,
+    33143,
+    53,
+    8080,
+    3000,
+    55514,
+    53,
+    8443
+  ]
+}

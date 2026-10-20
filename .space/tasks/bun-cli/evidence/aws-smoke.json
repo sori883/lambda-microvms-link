@@ -1,0 +1,151 @@
+{
+  "at": "2026-10-19T16:07:20.323Z",
+  "profile": "AdministratorAccess-242201303782",
+  "region": "ap-northeast-1",
+  "image": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+  "clientToken": "1f8625f2-1d2c-4ed6-9fcf-d7385effa58f",
+  "executableSha256": "4abab709a30602cbf47566a0c88bb3a8e79e6625e3f19b2f7642807a0ecbd061",
+  "steps": [
+    {
+      "args": [
+        "start",
+        "--image",
+        "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+        "--image-version",
+        "1.0",
+        "--duration",
+        "300",
+        "--client-token",
+        "1f8625f2-1d2c-4ed6-9fcf-d7385effa58f"
+      ],
+      "exitCode": 0,
+      "output": {
+        "microvmId": "microvm-59393af3-3827-3709-a2f7-9b6d145e098f",
+        "state": "RUNNING",
+        "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+        "imageVersion": "1.0",
+        "startedAt": "2026-10-19T16:07:22.434Z",
+        "endpoint": "04d0aa75-7204-c984-d329-a7268c00652c.lambda-microvm.ap-northeast-1.on.aws",
+        "maximumDurationInSeconds": 300,
+        "clientToken": "1f8625f2-1d2c-4ed6-9fcf-d7385effa58f"
+      }
+    },
+    {
+      "args": [
+        "list",
+        "--image",
+        "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev"
+      ],
+      "exitCode": 0,
+      "output": {
+        "microvms": [
+          {
+            "microvmId": "microvm-59393af3-3827-3709-a2f7-9b6d145e098f",
+            "state": "RUNNING",
+            "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+            "imageVersion": "1.0",
+            "startedAt": "2026-10-19T16:07:22.434Z"
+          },
+          {
+            "microvmId": "microvm-20ba744a-2809-3ddc-a558-df9e84ed1dfb",
+            "state": "TERMINATED",
+            "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+            "imageVersion": "1.0",
+            "startedAt": "2026-10-19T14:18:17.003Z"
+          },
+          {
+            "microvmId": "microvm-2f6547c5-3cc6-369d-8d79-798dc4d965eb",
+            "state": "TERMINATED",
+            "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+            "imageVersion": "1.0",
+            "startedAt": "2026-10-19T16:04:23.119Z"
+          }
+        ]
+      }
+    },
+    {
+      "args": [
+        "status",
+        "microvm-59393af3-3827-3709-a2f7-9b6d145e098f"
+      ],
+      "exitCode": 0,
+      "output": {
+        "microvmId": "microvm-59393af3-3827-3709-a2f7-9b6d145e098f",
+        "state": "RUNNING",
+        "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+        "imageVersion": "1.0",
+        "startedAt": "2026-10-19T16:07:22.434Z",
+        "endpoint": "04d0aa75-7204-c984-d329-a7268c00652c.lambda-microvm.ap-northeast-1.on.aws",
+        "maximumDurationInSeconds": 300
+      }
+    },
+    {
+      "args": [
+        "check",
+        "microvm-59393af3-3827-3709-a2f7-9b6d145e098f"
+      ],
+      "exitCode": 0,
+      "output": {
+        "microvmId": "microvm-59393af3-3827-3709-a2f7-9b6d145e098f",
+        "url": "https://04d0aa75-7204-c984-d329-a7268c00652c.lambda-microvm.ap-northeast-1.on.aws/health",
+        "port": 8080,
+        "statusCode": 200,
+        "ok": true
+      }
+    },
+    {
+      "args": [
+        "stop",
+        "microvm-59393af3-3827-3709-a2f7-9b6d145e098f"
+      ],
+      "exitCode": 0,
+      "output": {
+        "microvmId": "microvm-59393af3-3827-3709-a2f7-9b6d145e098f",
+        "state": "TERMINATED",
+        "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+        "imageVersion": "1.0",
+        "startedAt": "2026-10-19T16:07:22.434Z",
+        "endpoint": "04d0aa75-7204-c984-d329-a7268c00652c.lambda-microvm.ap-northeast-1.on.aws",
+        "maximumDurationInSeconds": 300,
+        "terminatedAt": "2026-10-19T16:07:28.884Z",
+        "stateReason": "Success."
+      }
+    },
+    {
+      "args": [
+        "status",
+        "microvm-59393af3-3827-3709-a2f7-9b6d145e098f"
+      ],
+      "exitCode": 0,
+      "output": {
+        "microvmId": "microvm-59393af3-3827-3709-a2f7-9b6d145e098f",
+        "state": "TERMINATED",
+        "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+        "imageVersion": "1.0",
+        "startedAt": "2026-10-19T16:07:22.434Z",
+        "endpoint": "04d0aa75-7204-c984-d329-a7268c00652c.lambda-microvm.ap-northeast-1.on.aws",
+        "maximumDurationInSeconds": 300,
+        "terminatedAt": "2026-10-19T16:07:28.884Z",
+        "stateReason": "Success."
+      }
+    },
+    {
+      "args": [
+        "stop",
+        "microvm-59393af3-3827-3709-a2f7-9b6d145e098f"
+      ],
+      "exitCode": 0,
+      "output": {
+        "microvmId": "microvm-59393af3-3827-3709-a2f7-9b6d145e098f",
+        "state": "TERMINATED",
+        "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+        "imageVersion": "1.0",
+        "startedAt": "2026-10-19T16:07:22.434Z",
+        "endpoint": "04d0aa75-7204-c984-d329-a7268c00652c.lambda-microvm.ap-northeast-1.on.aws",
+        "maximumDurationInSeconds": 300,
+        "terminatedAt": "2026-10-19T16:07:28.884Z",
+        "stateReason": "Success."
+      }
+    }
+  ]
+}

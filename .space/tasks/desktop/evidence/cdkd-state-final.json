@@ -1,0 +1,201 @@
+{
+  "state": {
+    "version": 12,
+    "region": "ap-northeast-1",
+    "stackName": "MicrovmFoundation",
+    "resources": {
+      "BuildLogs": {
+        "physicalId": "/aws/lambda-microvms/lambda-microvms-link-dev",
+        "resourceType": "AWS::Logs::LogGroup",
+        "properties": {
+          "LogGroupName": "/aws/lambda-microvms/lambda-microvms-link-dev",
+          "RetentionInDays": 7
+        },
+        "attributes": {
+          "Arn": "arn:aws:logs:ap-northeast-1:242201303782:log-group:/aws/lambda-microvms/lambda-microvms-link-dev:*"
+        },
+        "deletionPolicy": "Retain",
+        "updateReplacePolicy": "Retain",
+        "provisionedBy": "sdk",
+        "observedProperties": {
+          "LogGroupName": "/aws/lambda-microvms/lambda-microvms-link-dev",
+          "KmsKeyId": "",
+          "RetentionInDays": 7,
+          "LogGroupClass": "STANDARD",
+          "DeletionProtectionEnabled": false,
+          "BearerTokenAuthenticationEnabled": false,
+          "Tags": [],
+          "DataProtectionPolicy": "",
+          "FieldIndexPolicies": []
+        },
+        "constructPath": "MicrovmFoundation/BuildLogs"
+      },
+      "BuildRole": {
+        "physicalId": "MicrovmFoundation-BuildRole",
+        "resourceType": "AWS::IAM::Role",
+        "properties": {
+          "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Effect": "Allow",
+                "Principal": {
+                  "Service": "lambda.amazonaws.com"
+                },
+                "Action": [
+                  "sts:AssumeRole",
+                  "sts:TagSession"
+                ]
+              }
+            ]
+          },
+          "Description": "Build the lambda-microvms-link development image",
+          "Policies": [
+            {
+              "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Effect": "Allow",
+                    "Action": [
+                      "s3:GetObject"
+                    ],
+                    "Resource": "arn:aws:s3:::cdkd-assets-242201303782-ap-northeast-1/f2437f5c10d91631a37f1a79d761722b6ced4c13ea817bd6a289df0bcd6ee3b0.zip"
+                  },
+                  {
+                    "Effect": "Allow",
+                    "Action": [
+                      "logs:CreateLogStream",
+                      "logs:PutLogEvents"
+                    ],
+                    "Resource": "arn:aws:logs:ap-northeast-1:242201303782:log-group:/aws/lambda-microvms/lambda-microvms-link-dev:*"
+                  }
+                ]
+              },
+              "PolicyName": "BuildImage"
+            }
+          ]
+        },
+        "attributes": {
+          "Arn": "arn:aws:iam::242201303782:role/MicrovmFoundation-BuildRole",
+          "RoleId": "AROATQZCSTLTMMVHAVRMF"
+        },
+        "dependencies": [
+          "BuildLogs"
+        ],
+        "provisionedBy": "sdk",
+        "observedProperties": {
+          "RoleName": "MicrovmFoundation-BuildRole",
+          "Description": "Build the lambda-microvms-link development image",
+          "MaxSessionDuration": 3600,
+          "Path": "/",
+          "PermissionsBoundary": "",
+          "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Effect": "Allow",
+                "Principal": {
+                  "Service": "lambda.amazonaws.com"
+                },
+                "Action": [
+                  "sts:AssumeRole",
+                  "sts:TagSession"
+                ]
+              }
+            ]
+          },
+          "ManagedPolicyArns": [],
+          "Policies": [
+            {
+              "PolicyName": "BuildImage",
+              "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Effect": "Allow",
+                    "Action": [
+                      "s3:GetObject"
+                    ],
+                    "Resource": "arn:aws:s3:::cdkd-assets-242201303782-ap-northeast-1/f2437f5c10d91631a37f1a79d761722b6ced4c13ea817bd6a289df0bcd6ee3b0.zip"
+                  },
+                  {
+                    "Effect": "Allow",
+                    "Action": [
+                      "logs:CreateLogStream",
+                      "logs:PutLogEvents"
+                    ],
+                    "Resource": "arn:aws:logs:ap-northeast-1:242201303782:log-group:/aws/lambda-microvms/lambda-microvms-link-dev:*"
+                  }
+                ]
+              }
+            }
+          ],
+          "Tags": []
+        },
+        "constructPath": "MicrovmFoundation/BuildRole"
+      },
+      "Image": {
+        "physicalId": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+        "resourceType": "AWS::Lambda::MicrovmImage",
+        "properties": {
+          "Name": "lambda-microvms-link-dev",
+          "Description": "SSH and browser desktop image for the CLI development environment",
+          "BaseImageArn": "arn:aws:lambda:ap-northeast-1:aws:microvm-image:al2023-1",
+          "BuildRoleArn": "arn:aws:iam::242201303782:role/MicrovmFoundation-BuildRole",
+          "CodeArtifact": {
+            "Uri": "s3://cdkd-assets-242201303782-ap-northeast-1/f2437f5c10d91631a37f1a79d761722b6ced4c13ea817bd6a289df0bcd6ee3b0.zip"
+          },
+          "CpuConfigurations": [
+            {
+              "Architecture": "ARM_64"
+            }
+          ],
+          "Resources": [
+            {
+              "MinimumMemoryInMiB": 2048
+            }
+          ],
+          "Hooks": {
+            "Port": 8080,
+            "MicrovmImageHooks": {
+              "Ready": "ENABLED",
+              "ReadyTimeoutInSeconds": 60,
+              "Validate": "ENABLED",
+              "ValidateTimeoutInSeconds": 60
+            }
+          },
+          "Logging": {
+            "CloudWatch": {
+              "LogGroup": "/aws/lambda-microvms/lambda-microvms-link-dev"
+            }
+          }
+        },
+        "attributes": {
+          "ImageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+          "State": "UPDATED",
+          "LatestActiveImageVersion": "6.0",
+          "CreatedAt": "2026-10-19T14:15:37.829Z",
+          "UpdatedAt": "2026-10-20T05:26:27.941Z"
+        },
+        "dependencies": [
+          "BuildLogs",
+          "BuildRole"
+        ],
+        "provisionedBy": "sdk",
+        "observedProperties": {
+          "Name": "lambda-microvms-link-dev",
+          "Tags": []
+        },
+        "constructPath": "MicrovmFoundation/Image"
+      }
+    },
+    "outputs": {
+      "ImageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+      "BuildLogGroupName": "/aws/lambda-microvms/lambda-microvms-link-dev"
+    },
+    "exportNames": [],
+    "lastModified": 1792473997347
+  },
+  "lock": null
+}

@@ -1,0 +1,40 @@
+{
+  "create": {
+    "id": "6a306b4d-7e76-4fed-87f3-da8724e425b0",
+    "name": "namespaces",
+    "project": "/Users/const/sori883/lambda-microvms-link",
+    "accountId": "242201303782",
+    "region": "ap-northeast-1",
+    "profile": "AdministratorAccess-242201303782",
+    "microvmId": "microvm-fa1e3028-b9a4-332b-a0ff-d0458d19b8d6",
+    "state": "RUNNING",
+    "pending": null,
+    "desired": "running",
+    "observedAt": "2026-10-20T04:57:48.588Z",
+    "expiresAt": "2026-10-20T05:02:46.339Z"
+  },
+  "stateDirectory": "/tmp/mvm-desk-probe-ai_8olhq",
+  "probe": {
+    "exitCode": 0,
+    "stdout": "uid=1000(node) gid=1000(node) groups=1000(node)\nuid=0(root) gid=0(root) groups=0(root)\nuser-namespace-ok",
+    "stderr": ""
+  },
+  "stop": {
+    "exitCode": 0,
+    "result": {
+      "id": "6a306b4d-7e76-4fed-87f3-da8724e425b0",
+      "name": "namespaces",
+      "project": "/Users/const/sori883/lambda-microvms-link",
+      "accountId": "242201303782",
+      "region": "ap-northeast-1",
+      "profile": "AdministratorAccess-242201303782",
+      "microvmId": "microvm-fa1e3028-b9a4-332b-a0ff-d0458d19b8d6",
+      "state": "TERMINATED",
+      "pending": null,
+      "desired": "terminated",
+      "observedAt": "2026-10-20T04:58:01.870Z",
+      "expiresAt": "2026-10-20T05:02:46.339Z"
+    },
+    "stderr": ""
+  }
+}

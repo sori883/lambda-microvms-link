@@ -1,0 +1,56 @@
+{
+  "startedAt": "2026-10-19T14:18:16.013Z",
+  "account": "242201303782",
+  "region": "ap-northeast-1",
+  "imageArn": "arn:aws:lambda:ap-northeast-1:242201303782:microvm-image:lambda-microvms-link-dev",
+  "result": "passed",
+  "image": {
+    "state": "CREATED",
+    "version": "1.0",
+    "versionState": "SUCCESSFUL",
+    "versionStatus": "ACTIVE",
+    "baseImageArn": "arn:aws:lambda:ap-northeast-1:aws:microvm-image:al2023-1",
+    "baseImageVersion": "1.0",
+    "buildRoleArn": "arn:aws:iam::242201303782:role/MicrovmFoundation-BuildRole",
+    "codeArtifact": {
+      "uri": "s3://cdkd-assets-242201303782-ap-northeast-1/7ebe77805d5eb6cba96deb20c65facdb2d596cad41699205a5da913e49b48771.zip"
+    },
+    "hooks": {
+      "port": 8080,
+      "microvmHooks": {},
+      "microvmImageHooks": {
+        "ready": "ENABLED",
+        "readyTimeoutInSeconds": 60,
+        "validate": "ENABLED",
+        "validateTimeoutInSeconds": 60
+      }
+    },
+    "logging": {
+      "cloudWatch": {
+        "logGroup": "/aws/lambda-microvms/lambda-microvms-link-dev"
+      }
+    }
+  },
+  "microvm": {
+    "id": "microvm-20ba744a-2809-3ddc-a558-df9e84ed1dfb",
+    "initialState": "PENDING",
+    "maximumDurationInSeconds": 300,
+    "runningState": "RUNNING",
+    "endpoint": "https://5ed0aa43-81fe-0cc0-d18c-469a4fb61047.lambda-microvm.ap-northeast-1.on.aws",
+    "finalState": "TERMINATED",
+    "terminatedAt": "2026-10-19T14:18:20.131Z"
+  },
+  "unauthenticatedStatus": 403,
+  "authenticatedStatus": 200,
+  "authenticatedBody": {
+    "status": "ok"
+  },
+  "tokenScope": {
+    "expirationInMinutes": 5,
+    "allowedPorts": [
+      8080
+    ],
+    "persisted": false
+  },
+  "finishedAt": "2026-10-19T14:18:21.909Z"
+}

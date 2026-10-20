@@ -1,0 +1,92 @@
+$ bun run typecheck && bun run test
+$ tsc --noEmit
+$ bun test
+bun test v1.4.2 (744846f84)
+
+tests/ssh.test.ts:
+(pass) managed shell authenticates on port 8022, excludes control text and preserves bytes after a split bootstrap marker [5.16ms]
+(pass) managed shell preserves all byte values during multi-megabyte echo to a slow reader [372.09ms]
+(pass) managed shell bounds bootstrap output even if an oversized frame contains a complete marker [2.67ms]
+(pass) invalid shell control messages and premature close fail without exposing transport secrets [3.33ms]
+(pass) unexpected disconnect and cancellation reject bootstrap without echoing token or abort reason [1.82ms]
+(pass) a disconnect after bootstrap fails the binary reader instead of reporting a successful EOF [1.23ms]
+(pass) OpenSSH parses generated configuration and executes ProxyCommand with quoted paths and literal percent arguments [24.91ms]
+
+tests/foundation.test.ts:
+(pass) the real stack packages only image files and orders scoped build permissions before the image [816.05ms]
+(pass) image and SSH helper edits change the artifact URI; unrelated files do not, and a base version can be pinned [59.28ms]
+
+tests/image-desktop.test.ts:
+(skip) Docker desktop starts once, uses private Unix sockets and a Chromium sandbox, and survives viewer/browser close
+(skip) Docker desktop reports sandbox startup failure, reaps its children and leaves unrelated processes alive
+
+tests/desktop.test.ts:
+(pass) desktop serves embedded assets and requires exact browser authorization before SSH [198.98ms]
+(pass) authenticated desktop bytes round-trip with backpressure and connection count is bounded [213.16ms]
+(pass) text and oversized desktop frames are refused and SSH children are collected [192.97ms]
+(pass) desktop input buffering is bounded when SSH stops reading [685.99ms]
+(pass) a slow viewer backpressures its SSH producer and cancellation removes the listener and child [508.40ms]
+(pass) aborted desktop preparation kills a stubborn SSH process group before publishing readiness [709.36ms]
+(pass) desktop rejects old images and invalid or oversized readiness without leaking raw output [500.31ms]
+(pass) a browser opener ignoring SIGTERM is killed at its launch deadline [10154.28ms]
+(pass) the standalone desktop executable serves its client and license assets from another directory [1235.99ms]
+
+tests/session-ssh.test.ts:
+(pass) persistent SSH retains identity and pin across store reopen and repairs only its launcher [24.27ms]
+(pass) two CLI processes publish one SSH generation and discard only the losing generation [49.03ms]
+(pass) stop during SSH preparation prevents publication and cleans the unpublished identity [11.15ms]
+(pass) host pin and private-file violations are refused without regenerating SSH material [10.96ms]
+(pass) confirmed stop removes SSH secrets and retains the host pin [10.83ms]
+(pass) VS Code uses persistent application settings, preserves JSONC, and reports a missing extension [464.90ms]
+(pass) VS Code extension inspection has a finite deadline even when its child holds stdout open [196.70ms]
+(pass) VS Code rejects a user-data path exceeding the UTF-8 socket budget before launching code [60.22ms]
+
+tests/image.test.ts:
+(pass) the image process serves health and build hooks, rejecting unsupported routes and methods [16.18ms]
+
+tests/image-ssh.test.ts:
+(skip) Docker SSH helper carries stdin, preserves the host key and isolates concurrent sessions
+
+tests/session-cli.test.ts:
+(pass) sessions persist across CLI processes, permit two names per project, and stop idempotently [333.60ms]
+(pass) concurrent creates reserve a name once and an uncertain run is not automatically repeated [110.27ms]
+(pass) session operations reject a changed AWS account before touching the VM [169.59ms]
+(pass) a killed create cannot resend Run and explicit recovery keeps the original VM [210.46ms]
+(pass) stop during an in-flight create persists its intent and the created VM is terminated [122.44ms]
+(pass) list reports an AWS refresh failure as UNKNOWN rather than cached RUNNING [119.79ms]
+(pass) a rejected account change cannot leave a stop intent during VM creation [118.89ms]
+(pass) session SSH setup times out while credential_process is still pending [1122.61ms]
+
+tests/cli.test.ts:
+(pass) CLI help/version and invalid inputs do not contact AWS; JSON usage errors exit 2 [660.21ms]
+(pass) real CLI signs environment/session credentials and gathers every list page [62.34ms]
+(pass) large JSON output is fully flushed before the CLI exits [95.41ms]
+(pass) image names resolve through every image page before start and filtered list; missing names never run a VM [152.20ms]
+(pass) shared profiles supply credentials and region; credential_process and AWS_PROFILE use the SDK chain [244.21ms]
+(pass) start waits for RUNNING with a stable client token and bounded lifetime, then stop waits for termination [2226.13ms]
+(pass) start --no-wait returns the known ID; timeout retains ID and token without terminating the VM [1105.57ms]
+(pass) SIGINT returns 130 and the known VM ID during start polling [81.57ms]
+(pass) uncertain start errors keep the retry token; AWS errors do not echo response secrets [64.10ms]
+(pass) missing credentials and missing region return actionable errors without AWS requests [92.05ms]
+(pass) the CLI process exits by its deadline even while credential_process is still running [1065.18ms]
+(pass) check scopes its token and HTTP request, rejects redirects, and suppresses response and transport secrets [31.80ms]
+(pass) shell access checks state and endpoint, requests a one-minute shell token, and rejects missing tokens [8.01ms]
+(pass) SSH rejects JSON and invalid keys without contacting AWS; failed preparation cleans temporary keys [170.77ms]
+
+tests/session-store.test.ts:
+(pass) session names and run claims survive reopening and the state directory is private [13.51ms]
+(pass) stop intent prevents an unsubmitted run and survives a late VM binding [6.36ms]
+(pass) one VM cannot be assigned to two sessions and an existing binding cannot be replaced [3.13ms]
+(pass) SSH publication keeps the first generation and host pin across cleanup [3.38ms]
+(pass) separate CLI processes reserve and claim a name exactly once [38.85ms]
+(pass) unsupported schemas and malformed records are rejected without resetting existing data [4.02ms]
+
+3 tests skipped:
+(skip) Docker desktop starts once, uses private Unix sockets and a Chromium sandbox, and survives viewer/browser close
+(skip) Docker desktop reports sandbox startup failure, reaps its children and leaves unrelated processes alive
+(skip) Docker SSH helper carries stdin, preserves the host key and isolates concurrent sessions
+
+ 55 pass
+ 3 skip
+ 0 fail
+Ran 58 tests across 10 files. [25.22s]

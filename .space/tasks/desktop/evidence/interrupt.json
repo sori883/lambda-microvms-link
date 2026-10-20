@@ -1,0 +1,19 @@
+{
+  "signal": "SIGINT",
+  "processesBefore": [
+    {
+      "pid": 2405,
+      "name": "/tmp/mvm-desktop-aws-ancm9y78/mvm"
+    },
+    {
+      "pid": 3915,
+      "name": "ssh"
+    },
+    {
+      "pid": 3916,
+      "name": "/private/tmp/mvm-desktop-aws-ancm9y78/mvm"
+    }
+  ],
+  "liveProcessesAfter": [],
+  "listenerClosed": true
+}

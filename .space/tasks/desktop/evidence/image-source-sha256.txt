@@ -1,0 +1,4 @@
+0b2268c591407da90c7384b168c0003f762dd06e8d462d177aeb2797cce08a86  image/Dockerfile
+d1b8806cf04ddbceed06be2951571e78aa1b923eb481eee26364fa8fb5b856fc  image/mvm-desktop
+e967b552cf6dc32cd7598451febca2edad3533b3c3796bb1a2f497513d1ee63a  image/desktop.mjs
+f48bed1bf89de4933194618fa1c8a254453ad1b5b8b5181e3d7156268ca65a68  tests/image-desktop.test.ts

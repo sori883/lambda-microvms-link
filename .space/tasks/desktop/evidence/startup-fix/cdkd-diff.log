@@ -1,0 +1,70 @@
+$ cdkd diff MicrovmFoundation "--fail-on=destructive"
+Calculating diff...
+Synthesizing CDK app...
+Found 1 stack(s) in assembly
+
+Calculating diff for stack: MicrovmFoundation
+
+Stack MicrovmFoundation:
+  [~] BuildRole (AWS::IAM::Role)
+      - Policies:
+          old: [
+                {
+                  "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "s3:GetObject"
+                        ],
+                        "Resource": "arn:aws:s3:::cdkd-assets-242201303782-ap-northeast-1/f2437f5c10d91631a37f1a79d761722b6ced4c13ea817bd6a289df0bcd6ee3b0.zip"
+                      },
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "logs:CreateLogStream",
+                          "logs:PutLogEvents"
+                        ],
+                        "Resource": "arn:aws:logs:ap-northeast-1:242201303782:log-group:/aws/lambda-microvms/lambda-microvms-link-dev:*"
+                      }
+                    ]
+                  },
+                  "PolicyName": "BuildImage"
+                }
+              ]
+          new: [
+                {
+                  "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "s3:GetObject"
+                        ],
+                        "Resource": "arn:aws:s3:::cdkd-assets-242201303782-ap-northeast-1/6271003dc8654a7d45dad4b4927851e1e422cea89bf4ddc42fc56b240c50a543.zip"
+                      },
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "logs:CreateLogStream",
+                          "logs:PutLogEvents"
+                        ],
+                        "Resource": "arn:aws:logs:ap-northeast-1:242201303782:log-group:/aws/lambda-microvms/lambda-microvms-link-dev:*"
+                      }
+                    ]
+                  },
+                  "PolicyName": "BuildImage"
+                }
+              ]
+  [~] Image (AWS::Lambda::MicrovmImage)
+      - CodeArtifact:
+          old: {
+                "Uri": "s3://cdkd-assets-242201303782-ap-northeast-1/f2437f5c10d91631a37f1a79d761722b6ced4c13ea817bd6a289df0bcd6ee3b0.zip"
+              }
+          new: {
+                "Uri": "s3://cdkd-assets-242201303782-ap-northeast-1/6271003dc8654a7d45dad4b4927851e1e422cea89bf4ddc42fc56b240c50a543.zip"
+              }
+
+0 to create, 2 to update, 0 to delete

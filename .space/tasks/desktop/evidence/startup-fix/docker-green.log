@@ -1,0 +1,13 @@
+$ bun test tests/image-desktop.test.ts
+bun test v1.4.2 (744846f84)
+
+tests/image-desktop.test.ts:
+(pass) Docker desktop starts once, uses private Unix sockets and a Chromium sandbox, and survives viewer/browser close [2125.46ms]
+(pass) Docker desktop reports sandbox startup failure, reaps its children and leaves unrelated processes alive [1502.63ms]
+(pass) Docker desktop waits for a slow first Chromium launch without weakening the sandbox [17076.76ms]
+(pass) Docker desktop allows slow display and settings startup within the overall preparation deadline [23522.18ms]
+(pass) Docker desktop detects Chromium exiting while its window probe is still pending [2215.00ms]
+
+ 5 pass
+ 0 fail
+Ran 5 tests across 1 file. [46.45s]

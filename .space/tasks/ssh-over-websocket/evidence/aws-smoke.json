@@ -1,0 +1,51 @@
+{
+  "at": "2026-10-19T17:59:41.723Z",
+  "binarySha256": "9e1e91ec96be5871945e8245228765ab30603489ac5be859b0f427804ced0cf5",
+  "checks": [
+    {
+      "name": "health"
+    },
+    {
+      "name": "stdout-stderr-exit-status"
+    },
+    {
+      "name": "multiline-remote-script"
+    },
+    {
+      "name": "scp-sftp-roundtrip",
+      "bytes": 4194304,
+      "sha256": "d28a433d5066aaaf65678537036710e0860d43f24c5f97eba134ba0e045c6df9"
+    },
+    {
+      "name": "rsync-roundtrip"
+    },
+    {
+      "name": "parallel-ssh"
+    },
+    {
+      "name": "reject-host-key-mismatch"
+    },
+    {
+      "name": "reject-wrong-client-key"
+    },
+    {
+      "name": "host-key-stability-and-VM-separation"
+    },
+    {
+      "name": "connection-survives-setup-deadline-and-one-minute-token",
+      "seconds": 75
+    }
+  ],
+  "vms": [
+    {
+      "id": "microvm-6bc70953-2a0f-3a01-8031-3327f22bd0b4",
+      "imageVersion": "3.0",
+      "finalState": "TERMINATED"
+    },
+    {
+      "id": "microvm-796964fb-7a83-3151-b7b9-b7b9e72f2382",
+      "imageVersion": "3.0",
+      "finalState": "TERMINATED"
+    }
+  ]
+}

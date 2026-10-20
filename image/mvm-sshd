@@ -1,0 +1,124 @@
+#!/bin/sh
+set -eu
+export LC_ALL=C
+
+fail() {
+    printf 'mvm-sshd: %s\n' "$1" >&2
+    exit 1
+}
+
+mode=${1-}
+case "$mode:$#" in
+    host-key:2) nonce=$2 ;;
+    serve:3) nonce=$3 ;;
+    *) fail 'Expected host-key <nonce> or serve <public-key-base64> <nonce>.' ;;
+esac
+case "$nonce" in
+    ''|*[!0-9a-f]*) fail 'Invalid session nonce.' ;;
+esac
+[ "${#nonce}" -eq 32 ] || fail 'Invalid session nonce.'
+
+if [ "$mode" = serve ]; then
+    encoded=$2
+    case "$encoded" in
+        ''|*[!A-Za-z0-9+/=]*) fail 'Invalid encoded public key.' ;;
+    esac
+    [ "${#encoded}" -le 4096 ] || fail 'Encoded public key is too long.'
+    public_key=$(printf '%s' "$encoded" | base64 --decode 2>/dev/null) || fail 'Invalid encoded public key.'
+    case "$public_key" in
+        'ssh-ed25519 '*) material=${public_key#ssh-ed25519 } ;;
+        *) fail 'An Ed25519 public key is required.' ;;
+    esac
+    case "$material" in
+        ''|*[!A-Za-z0-9+/=]*) fail 'Invalid Ed25519 public key.' ;;
+    esac
+fi
+
+[ "$(id -u)" -eq 0 ] || fail 'The managed shell must run this helper as root.'
+umask 077
+root=/run/mvm-ssh
+host_key=$root/host_ed25519
+session=
+key_work=
+server_pid=
+
+cleanup() {
+    if [ -n "$server_pid" ]; then
+        kill "$server_pid" 2>/dev/null || :
+        wait "$server_pid" 2>/dev/null || :
+    fi
+    if [ -n "$session" ]; then rm -rf -- "$session"; fi
+    if [ -n "$key_work" ]; then rm -rf -- "$key_work"; fi
+}
+trap cleanup EXIT
+trap 'exit 129' HUP
+trap 'exit 130' INT
+trap 'exit 143' TERM
+
+install -d -o root -g root -m 0711 "$root"
+install -d -o root -g root -m 0755 /run/sshd
+
+if [ "$mode" = serve ]; then
+    session=$(mktemp -d "$root/session.XXXXXXXX")
+    chmod 0755 "$session"
+    printf '%s\n' "$public_key" > "$session/authorized_keys"
+    chmod 0644 "$session/authorized_keys"
+    ssh-keygen -l -f "$session/authorized_keys" >/dev/null 2>&1 || fail 'Invalid Ed25519 public key.'
+fi
+
+exec 9>"$root/host-key.lock"
+flock -x -w 15 9 || fail 'Host key initialization is busy.'
+if [ ! -e "$host_key" ]; then
+    key_work=$(mktemp -d "$root/key.XXXXXXXX")
+    ssh-keygen -q -t ed25519 -N '' -C '' -f "$key_work/key"
+    chmod 0600 "$key_work/key"
+    mv "$key_work/key" "$host_key"
+    rm -rf -- "$key_work"
+    key_work=
+fi
+[ -f "$host_key" ] && [ ! -L "$host_key" ] || fail 'Invalid host key file.'
+host_public=$(ssh-keygen -y -f "$host_key") || fail 'The host key could not be read.'
+flock -u 9
+exec 9>&-
+
+if [ "$mode" = host-key ]; then
+    printf '\036MVM_%s:%s\037' "$nonce" "$host_public"
+    exit 0
+fi
+
+cat > "$session/sshd_config" <<EOF
+HostKey $host_key
+HostKeyAlgorithms ssh-ed25519
+PubkeyAcceptedAlgorithms ssh-ed25519
+AuthorizedKeysFile $session/authorized_keys
+AuthenticationMethods publickey
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitEmptyPasswords no
+PermitRootLogin no
+AllowUsers node
+UsePAM no
+StrictModes yes
+PermitUserEnvironment no
+PermitUserRC no
+AllowAgentForwarding no
+X11Forwarding no
+PermitTTY yes
+UseDNS no
+PrintMotd no
+PrintLastLog no
+LogLevel ERROR
+PidFile none
+Subsystem sftp internal-sftp
+EOF
+/usr/sbin/sshd -t -f "$session/sshd_config" || fail 'The SSH server configuration is invalid.'
+printf '\036MVM_%s:ready\037' "$nonce"
+exec 3<&0
+/usr/sbin/sshd -i -e -f "$session/sshd_config" <&3 3<&- 2>"$session/sshd.log" &
+server_pid=$!
+exec 3<&-
+result=0
+wait "$server_pid" || result=$?
+server_pid=
+exit "$result"

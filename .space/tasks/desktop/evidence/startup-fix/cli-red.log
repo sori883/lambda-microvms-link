@@ -1,0 +1,33 @@
+$ bun test tests/desktop.test.ts --test-name-pattern "reports the failed"
+bun test v1.4.2 (744846f84)
+
+tests/desktop.test.ts:
+324 |     try {
+325 |       assert.notEqual(await f.done, 0);
+326 |       assert.equal(f.stdout, '');
+327 |       assert.match(f.stderr, /DesktopStartupFailed/);
+328 |       assert.equal(f.stderr.includes('private-error-not-for-user'), false);
+329 |       assert.equal(f.stderr.includes('DesktopStartFailed:xvnc'), ensure === 'failed-safe');
+                   ^
+AssertionError: Expected values to be strictly equal:
+
+false !== true
+
+ generatedMessage: true,
+     actual: false,
+   expected: true,
+   operator: "strictEqual",
+       diff: "simple",
+       code: "ERR_ASSERTION"
+
+      at /Users/const/sori883/lambda-microvms-link/tests/desktop.test.ts:329:14
+      at node:test:1445:26
+      at executeTestNode (node:test:1448:63)
+      at processTicksAndRejections (native:7:39)
+(fail) desktop reports the failed VM startup component without forwarding arbitrary diagnostics [444.71ms]
+
+ 0 pass
+ 9 filtered out
+ 1 fail
+Ran 1 test across 1 file. [462.00ms]
+error: script "test" exited with code 1

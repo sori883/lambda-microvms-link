@@ -1,0 +1,120 @@
+$ cdkd synth
+Synthesizing CDK app...
+Resources:
+  BuildLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/lambda-microvms/lambda-microvms-link-dev
+      RetentionInDays: 7
+    UpdateReplacePolicy: Retain
+    DeletionPolicy: Retain
+    Metadata:
+      aws:cdk:path: MicrovmFoundation/BuildLogs
+  BuildRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+              - sts:TagSession
+      Description: Build the lambda-microvms-link development image
+      Policies:
+        - PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                Resource:
+                  Fn::Join:
+                    - ""
+                    - - "arn:"
+                      - Ref: AWS::Partition
+                      - ":s3:::"
+                      - Fn::Sub: cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}
+                      - /1d532746bdda71f24403fc047516cec75f9f10ec671fcfbe5a7fb65847c99d6a.zip
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource:
+                  Fn::GetAtt:
+                    - BuildLogs
+                    - Arn
+          PolicyName: BuildImage
+    Metadata:
+      aws:cdk:path: MicrovmFoundation/BuildRole
+  Image:
+    Type: AWS::Lambda::MicrovmImage
+    Properties:
+      Name: lambda-microvms-link-dev
+      Description: SSH and browser desktop image for the CLI development environment
+      BaseImageArn:
+        Fn::Sub: arn:${AWS::Partition}:lambda:${AWS::Region}:aws:microvm-image:al2023-1
+      BuildRoleArn:
+        Fn::GetAtt:
+          - BuildRole
+          - Arn
+      CodeArtifact:
+        Uri:
+          Fn::Sub: s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1d532746bdda71f24403fc047516cec75f9f10ec671fcfbe5a7fb65847c99d6a.zip
+      CpuConfigurations:
+        - Architecture: ARM_64
+      Resources:
+        - MinimumMemoryInMiB: 2048
+      Hooks:
+        Port: 8080
+        MicrovmImageHooks:
+          Ready: ENABLED
+          ReadyTimeoutInSeconds: 60
+          Validate: ENABLED
+          ValidateTimeoutInSeconds: 60
+      Logging:
+        CloudWatch:
+          LogGroup:
+            Ref: BuildLogs
+    DependsOn:
+      - BuildLogs
+      - BuildRole
+    Metadata:
+      aws:cdk:path: MicrovmFoundation/Image
+Outputs:
+  ImageArn:
+    Value:
+      Fn::GetAtt:
+        - Image
+        - ImageArn
+  BuildLogGroupName:
+    Value:
+      Ref: BuildLogs
+Parameters:
+  BootstrapVersion:
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /cdk-bootstrap/hnb659fds/version
+    Description: Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]
+Rules:
+  CheckBootstrapVersion:
+    Assertions:
+      - Assert:
+          Fn::Not:
+            - Fn::Contains:
+                - - "1"
+                  - "2"
+                  - "3"
+                  - "4"
+                  - "5"
+                - Ref: BootstrapVersion
+        AssertDescription: CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.
+
+[32m✓[0m [1mSynthesis complete![0m Found 1 stack(s):
+  • MicrovmFoundation
+    - Resources: 3
+    - Outputs: 2
+    - Has assets: Yes
+
+Output: /Users/const/sori883/lambda-microvms-link/cdk.out
